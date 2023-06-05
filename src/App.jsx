@@ -1,15 +1,11 @@
-import { useState } from 'react'
+import Title from "./components/title.jsx";
 
-import './App.css'
+const App = () => {
+    return (
+        <div className="w-full">
+            <Title></Title>
+        </div>
+    );
+};
 
-function App() {
-
-
-  return (
-    <>
-      <h1 className="text-blue">Test</h1>
-    </>
-  )
-}
-
-export default App
+export default App;
