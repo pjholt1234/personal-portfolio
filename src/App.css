@@ -26,7 +26,7 @@
 
 @keyframes animateRight{
      from{
-         right:-300px;
+         right:-100%;
          opacity:0
      }
 
