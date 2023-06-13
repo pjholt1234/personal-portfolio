@@ -1,6 +1,10 @@
+.slide-in {
+    backface-visibility: hidden;
+}
+
 .animate-left {
     position: relative;
-    animation: animateLeft 0.4s;
+    animation: animateLeft 1s;
 }
 
 @keyframes animateLeft {
@@ -17,7 +21,7 @@
 
 .animate-right {
     position:relative;
-    animation:animateRight 0.4s
+    animation:animateRight 1s
 }
 
 @keyframes animateRight{
@@ -27,7 +31,32 @@
      }
 
      to{
-        right:0;
+         right:0;
          opacity:1
      }
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.grow {
+    height: 60px;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    overflow: hidden;
+}
+.grow:hover {
+    height: 85px;
 }
