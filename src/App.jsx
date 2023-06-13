@@ -1,6 +1,7 @@
 import Title from "./components/title.jsx";
 import SlideInCard from "./components/slideInCard.jsx";
 import Timeline from "./components/timeline.jsx";
+import Bio from "./components/bio";
 const App = () => {
     const events = [
         {
@@ -22,6 +23,11 @@ const App = () => {
     return (
         <div className="w-full">
             <Title />
+            <div className="w-1/2">
+                <SlideInCard>
+                    <Bio />
+                </SlideInCard>
+            </div>
             <div className="w-1/2 mr-0 ml-auto">
                 <SlideInCard right={true}>
                     <Timeline events={events} />
