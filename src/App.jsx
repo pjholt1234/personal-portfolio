@@ -40,7 +40,7 @@ const App = () => {
             </div>
             <div>
                 <Carousel>
-                    <SlideUpContainer classes="w-1/3 m-1">
+                    <SlideUpContainer delay={500} classes="w-1/3 m-1">
                         <Card classes="bg-red-500">
                             <div className="flex">
                                 <h2 className="text-white">Final Year Dissertation</h2>
@@ -64,7 +64,7 @@ const App = () => {
                             </ul>
                         </Card>
                     </SlideUpContainer>
-                    <SlideUpContainer delay={500} classes="w-1/3 m-1">
+                    <SlideUpContainer delay={1000} classes="w-1/3 m-1">
                         <Card classes="bg-green-500">
                             <div className="flex">
                                 <h2 className="text-white">Steam Item Market Tracker</h2>
