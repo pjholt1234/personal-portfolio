@@ -52,11 +52,33 @@ h3 {
 }
 
 .grow {
-    height: 60px;
+    height: 50px;
     transition: height 0.5s;
     -webkit-transition: height 0.5s;
     overflow: hidden;
 }
+
 .grow:hover {
     height: 85px;
+}
+
+.slide-in {
+    backface-visibility: hidden;
+}
+
+.animate-up {
+    position: relative;
+    animation: animateUp 2s, 5s;
+}
+
+@keyframes animateUp {
+    0% {
+        top: -200%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
 }
