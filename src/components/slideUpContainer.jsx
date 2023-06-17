@@ -6,7 +6,6 @@ const SlideUpContainer = ({children, classes = "", delay = 0}) => {
 
     return (
         <InView
-            triggerOnce={true}
             delay={delay}
             as="div"
             className={`${classes} my-5 px-2 w-full slide-in ${visible ? "animate-up" : ""}`}
