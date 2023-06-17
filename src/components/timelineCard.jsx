@@ -31,9 +31,9 @@ TimelineCard.propTypes = {
     heading: PropTypes.string,
     subheading: PropTypes.string,
     text: PropTypes.string,
-    left: PropTypes.string,
+    left: PropTypes.bool,
     color: PropTypes.string,
-    icon: PropTypes.string
+    icon: PropTypes.string,
 }
 
 
