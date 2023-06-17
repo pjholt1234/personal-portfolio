@@ -5,8 +5,8 @@ import Bio from "./components/bio";
 import Carousel from "./components/carousel.jsx";
 import ProjectCard from "./components/projectCard.jsx";
 import SlideUpContainer from "./components/slideUpContainer.jsx";
-import DissertationImg from './assets/dissertation1.jpg';
-import NotionSteamAppImg from './assets/notion-steam-app.png';
+import * as images from './assets/index';
+
 const App = () => {
     const events = [
         {
@@ -40,10 +40,10 @@ const App = () => {
                     </SlideInCard>
                 </div>
             </div>
-            <Carousel flex="my-5">
+            <Carousel flex="my-5z">
                 <SlideUpContainer classes="w-1/3 m-1">
                     <ProjectCard
-                        imageSrc={DissertationImg}
+                        images={[images.disPlanning1, images.disPlanning2, images.disPlanning3]}
                         title="Final Year Dissertation"
                         date="Oct 2020 - April 2021"
                         bgColor="bg-blue-800"
@@ -61,7 +61,7 @@ const App = () => {
                 </SlideUpContainer>
                 <SlideUpContainer classes="w-1/3 m-1">
                     <ProjectCard
-                        imageSrc={NotionSteamAppImg}
+                        images={[images.notionSteamApp]}
                         title="Steam Market Price Tracker"
                         date="Mar 2023 - May 2023"
                         bgColor="bg-red-700"
