@@ -22,7 +22,7 @@ const SlideInCard = ({children, right = false, className = ""}) => {
 SlideInCard.propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
-    right: PropTypes.string,
+    right: PropTypes.bool,
 }
 
 export default SlideInCard;
