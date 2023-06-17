@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const ProjectCard = ({
-    imageSrc,
+    images = [],
     title,
     date,
     bgColor = "bg-black",
@@ -12,6 +12,27 @@ const ProjectCard = ({
     children
 }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const [currentImage, setCurrentImage] = useState(images[0]);
+    const [imageIndex, setImageIndex] = useState(0);
+
+    useEffect(() => {
+        if(images.length <= 0){
+            return;
+        }
+
+        const intervalId = setInterval(() => {
+            if(imageIndex >= images.length - 2){
+                setImageIndex(0);
+            } else {
+                setImageIndex(imageIndex + 1);
+            }
+
+            setCurrentImage(images[imageIndex]);
+        }, 5000)
+
+        return () => clearInterval(intervalId);
+    }, [imageIndex]);
+
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -58,7 +79,7 @@ const ProjectCard = ({
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-                <img src={imageSrc} alt="ProjectCard Image" className={`w-full h-full object-cover ${imgAlignment}`} />
+                <img src={currentImage} alt="ProjectCard Image" className={`w-full h-full object-cover ${imgAlignment}`} />
                 <div
                     className={`absolute inset-0 p-4 ${bgColor} bg-opacity-80 text-white transition-all ${
                         isHovered ? 'top-0' : 'top-[410px]'
