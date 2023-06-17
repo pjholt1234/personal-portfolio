@@ -1,4 +1,6 @@
-const timelineCard = ({heading, subheading, text, left, color, icon}) => {
+import PropTypes from "prop-types";
+
+const TimelineCard = ({heading, subheading, text, left, color, icon}) => {
 
     return (
         <div className="flex m-2">
@@ -25,4 +27,14 @@ const timelineCard = ({heading, subheading, text, left, color, icon}) => {
     )
 }
 
-export default timelineCard;
+TimelineCard.propTypes = {
+    heading: PropTypes.string,
+    subheading: PropTypes.string,
+    text: PropTypes.string,
+    left: PropTypes.string,
+    color: PropTypes.string,
+    icon: PropTypes.string
+}
+
+
+export default TimelineCard;

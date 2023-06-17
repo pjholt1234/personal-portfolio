@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const ProjectCard = ({
     images = [],
@@ -9,7 +10,6 @@ const ProjectCard = ({
     description = "",
     technology = [],
     imgAlignment = "",
-    children
 }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [currentImage, setCurrentImage] = useState(images[0]);
@@ -98,5 +98,16 @@ const ProjectCard = ({
         </div>
     );
 };
+
+ProjectCard.propTypes = {
+    images: PropTypes.array,
+    title: PropTypes.string,
+    date: PropTypes.string,
+    bgColor: PropTypes.string,
+    gitHubLink: PropTypes.string,
+    description: PropTypes.string,
+    technology: PropTypes.array,
+    imgAlignment: PropTypes.string,
+}
 
 export default ProjectCard;

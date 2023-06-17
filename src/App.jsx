@@ -41,7 +41,7 @@ const App = () => {
                 </div>
             </div>
             <Carousel flex="my-5z">
-                <SlideUpContainer classes="w-1/3 m-1">
+                <SlideUpContainer className="w-1/3 m-1">
                     <ProjectCard
                         images={[images.disPlanning1, images.disPlanning2, images.disPlanning3]}
                         title="Final Year Dissertation"
@@ -59,7 +59,7 @@ const App = () => {
                         ]}
                     />
                 </SlideUpContainer>
-                <SlideUpContainer classes="w-1/3 m-1">
+                <SlideUpContainer className="w-1/3 m-1">
                     <ProjectCard
                         images={[images.notionSteamApp]}
                         title="Steam Market Price Tracker"
