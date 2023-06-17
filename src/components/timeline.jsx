@@ -1,7 +1,7 @@
 import TimelineCard from "./timelineCard.jsx";
-import PropTypes from "prop-types";
+import events from "../data/events";
 
-const Timeline = ({events}) => {
+const Timeline = () => {
     var count = 0;
 
     const listItems = events.map((event) => {
@@ -31,10 +31,6 @@ const Timeline = ({events}) => {
             {listItems}
         </div>
     );
-}
-
-Timeline.propTypes = {
-    events: PropTypes.array,
 }
 
 export default Timeline;

@@ -3,27 +3,7 @@ import SlideInCard from "./components/slideInCard.jsx";
 import Timeline from "./components/timeline.jsx";
 import Bio from "./components/bio";
 import Carousel from "./components/carousel.jsx";
-import ProjectCard from "./components/projectCard.jsx";
-import SlideUpContainer from "./components/slideUpContainer.jsx";
-import * as images from './assets/index';
-
 const App = () => {
-    const events = [
-        {
-            "heading": "University of the West of England",
-            "subheading": "Sept 2018 - June 2021",
-            "text": "First Class Bachelor of Science, Business Computing",
-            "color": "bg-blue-800",
-            "icon": "fa-solid fa-graduation-cap"
-        },
-        {
-            "heading": "Lightflows",
-            "subheading": "Oct 2021 - Present",
-            "text": "Junior Web Developer",
-            "color": "bg-red-700",
-            "icon": "fa-sharp fa-solid fa-briefcase"
-        },
-    ]
 
     return (
         <div className="w-full">
@@ -36,51 +16,11 @@ const App = () => {
                 </div>
                 <div className="w-1/2">
                     <SlideInCard right={true}>
-                        <Timeline events={events} />
+                        <Timeline />
                     </SlideInCard>
                 </div>
             </div>
-            <Carousel flex="my-5z">
-                <SlideUpContainer className="w-1/3 m-1">
-                    <ProjectCard
-                        images={[images.disPlanning1, images.disPlanning2, images.disPlanning3]}
-                        title="Final Year Dissertation"
-                        date="Oct 2020 - April 2021"
-                        bgColor="bg-blue-800"
-                        gitHubLink="https://github.com/pjholt1234/ExerciseWebCompanion"
-                        description="My final year dissertation was my first large scale web application. The aim of the
-                            project was to create a tool for planning, scheduling and tracking workouts."
-                        technology={[
-                            'PHP',
-                            'Javascript',
-                            'JQuery',
-                            'MySql',
-                            'CSS'
-                        ]}
-                    />
-                </SlideUpContainer>
-                <SlideUpContainer className="w-1/3 m-1">
-                    <ProjectCard
-                        images={[images.notionSteamApp]}
-                        title="Steam Market Price Tracker"
-                        date="Mar 2023 - May 2023"
-                        bgColor="bg-red-700"
-                        gitHubLink="https://github.com/pjholt1234/notion-steam-app"
-                        description="This project provides an interface for entering steam item purchases + sales, and calculates profit based on item price data.
-                            Additional, it allows you to export to a notion table. The aim of the project practice using laravel livewire and the TALL stack."
-                        technology={[
-                            'PHP',
-                            'Javascript',
-                            'Laravel',
-                            'Livewire',
-                            'Tailwind',
-                            'Alpine JS'
-                        ]}
-                        imgAlignment="object-left-top"
-                    />
-                </SlideUpContainer>
-
-            </Carousel>
+            <Carousel className="flex my-5" />
         </div>
     );
 };
