@@ -1,6 +1,6 @@
-const Carousel = ({children}) => {
+const Carousel = ({classes, children}) => {
     return (
-        <div className="flex">
+        <div className={`${classes} flex`}>
             {children}
         </div>
     )
