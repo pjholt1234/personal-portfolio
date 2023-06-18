@@ -21,7 +21,7 @@ const ProjectCard = ({
         }
 
         const intervalId = setInterval(() => {
-            if(imageIndex >= images.length - 2){
+            if(imageIndex >= images.length - 1){
                 setImageIndex(0);
             } else {
                 setImageIndex(imageIndex + 1);
