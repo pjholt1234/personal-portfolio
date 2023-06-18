@@ -59,7 +59,7 @@ h3 {
 }
 
 .grow:hover {
-    height: 200px;
+    height: 210px;
 }
 
 .slide-in {
@@ -81,4 +81,14 @@ h3 {
         top: 0;
         opacity: 1;
     }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
 }

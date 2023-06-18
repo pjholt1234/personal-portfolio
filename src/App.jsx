@@ -20,7 +20,9 @@ const App = () => {
                     </SlideInCard>
                 </div>
             </div>
-            <Carousel className="flex" />
+            <div className="py-3 px-10">
+                <Carousel />
+            </div>
         </div>
     );
 };

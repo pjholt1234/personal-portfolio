@@ -75,7 +75,7 @@ const ProjectCard = ({
 
     return (
         <div
-            className="relative w-full overflow-hidden rounded-lg shadow-md h-[500px]"
+            className="relative w-[400px] h-[400px] overflow-hidden rounded-lg shadow-md"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
@@ -90,10 +90,8 @@ const ProjectCard = ({
                         {outputGitHubLink()}
                     </div>
                     <h3 className="font-medium mb-3">{date}</h3>
-                    <div className="h-full flex flex-wrap">
-                        <p className="text-white my-auto">{description}</p>
-                        {outputTechnologyList()}
-                    </div>
+                    <p className="text-white mb-3">{description}</p>
+                    {outputTechnologyList()}
                 </div>
         </div>
     );
