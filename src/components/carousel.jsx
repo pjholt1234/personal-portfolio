@@ -7,7 +7,7 @@ import projects from "../data/projects.js";
 const Carousel = () => {
     const projectCards = projects.map((project) => {
         return (
-            <SlideUpContainer key={project.title} className="w-1/3 m-1">
+            <SlideUpContainer key={project.title} className="w-1/3 p-1">
                 <ProjectCard
                     images={project.images}
                     title={project.title}
@@ -23,7 +23,7 @@ const Carousel = () => {
     });
 
     return (
-        <div className="flex w-full">
+        <div className="flex w-full mx-auto">
             {projectCards}
         </div>
     );

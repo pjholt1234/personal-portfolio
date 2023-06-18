@@ -8,7 +8,7 @@ const App = () => {
     return (
         <div className="w-full">
             <Title />
-            <div className="flex my-20">
+            <div className="flex">
                 <div className="w-1/2">
                     <SlideInCard>
                         <Bio />
@@ -20,7 +20,7 @@ const App = () => {
                     </SlideInCard>
                 </div>
             </div>
-            <Carousel className="flex my-5" />
+            <Carousel className="flex" />
         </div>
     );
 };

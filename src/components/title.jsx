@@ -13,7 +13,7 @@ const Title = () => {
                     </a>
                 </div>
             </div>
-            <div className="flex justify-center w-screen h-screen items-center">
+            <div className="flex justify-center h-screen items-center">
                 <div>
                     <h1 className="text-10xl shadow-outline">PJ Holt</h1>
                     <h2 className="text-3xl">Web developer</h2>
