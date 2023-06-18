@@ -18,6 +18,7 @@ const Timeline = () => {
                     heading={event.heading}
                     subheading={event.subheading}
                     text={event.text}
+                    description={event.description}
                     color={event.color}
                     icon={event.icon}
                     left={left}
