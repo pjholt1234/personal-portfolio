@@ -3,23 +3,28 @@ import SlideInCard from "./components/slideInCard.jsx";
 import Timeline from "./components/timeline.jsx";
 import Bio from "./components/bio";
 import Carousel from "./components/carousel.jsx";
+import BubbleWrapper from "./components/bubbleWrapper.jsx";
+import Container from "./components/container.jsx";
 const App = () => {
 
     return (
         <div className="w-full">
             <Title />
-            <div className="flex">
+            <Container>
                 <div className="w-1/2">
-                    <SlideInCard>
+                    <SlideInCard triggerOnce={true}>
                         <Bio />
                     </SlideInCard>
                 </div>
                 <div className="w-1/2">
-                    <SlideInCard right={true}>
+                    <SlideInCard right={true} triggerOnce={true}>
                         <Timeline />
                     </SlideInCard>
                 </div>
-            </div>
+            </Container>
+            <Container>
+                <BubbleWrapper />
+            </Container>
             <div className="py-3 px-10">
                 <Carousel />
             </div>
