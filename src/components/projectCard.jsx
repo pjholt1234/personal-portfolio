@@ -82,7 +82,7 @@ const ProjectCard = ({
                 <img src={currentImage} alt="ProjectCard Image" className={`w-full h-full object-cover ${imgAlignment}`} />
                 <div
                     className={`absolute inset-0 p-4 ${bgColor} bg-opacity-80 text-white transition-all ${
-                        isHovered ? 'top-0' : 'top-[410px]'
+                        isHovered ? 'top-0' : 'top-[310px]'
                     }`}
                 >
                     <div className="flex">

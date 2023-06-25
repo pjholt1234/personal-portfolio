@@ -76,7 +76,7 @@ const projects = [
         ],
         "title": "Final Year Dissertation",
         "date": "Oct 2020 - April 2021",
-        "bgColor": "bg-blue-800",
+        "bgColor": "bg-orange-500",
         "gitHubLink": "https://github.com/pjholt1234/ExerciseWebCompanion",
         "description": "My final year dissertation was my first large-scale web application. My idea for the project was to create a tool for planning, scheduling and tracking workouts.",
         "technology": [
@@ -94,7 +94,7 @@ const projects = [
         ],
         "title": "Steam Market Price Tracker",
         "date": "Mar 2023 - May 2023",
-        "bgColor": "bg-red-700",
+        "bgColor": "bg-purple-700",
         "gitHubLink": "https://github.com/pjholt1234/notion-steam-app",
         "description": "This project provides an interface for entering steam item purchases and sales and calculates profit based on item price data. Additionally, it allows you to export to a notion table. The aim of the project was to practice using Laravel Livewire and the TALL stack.",
         "technology": [
@@ -114,7 +114,7 @@ const projects = [
         ],
         "title": "Personal Portfolio",
         "date": "June 2023 - Present",
-        "bgColor": "bg-green-700",
+        "bgColor": "bg-pink-700",
         "gitHubLink": "https://github.com/pjholt1234/personal-portfolio",
         "description": "I saw the use of the intersection observer online for some interesting css animations tied into the page scroll. This inspired me to refresh my personal portfolio site. I took this opportunity to brush up on my React knowledge too.",
         "technology": [
