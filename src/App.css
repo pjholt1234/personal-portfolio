@@ -95,23 +95,26 @@ body {
 
 .grow-left {
     margin: 10px;
-    padding: 35px;
-    width: 100px;
-    height: 100px;
+    padding: 55px;
+    width: 150px;
+    height: 150px;
     transition: width 0.5s;
     -webkit-transition: width 0.5s;
     overflow: hidden;
+    flex-grow: 1;
 }
 
 .grow-left:hover {
-    width: 900px;
+    width: 700px;
 }
 
 .hidden-child {
+    opacity: 0;
     display: none;
 }
 
 .grow-left:hover .hidden-child{
     display: flex;
+    opacity: 1;
     transition: .4s;
 }

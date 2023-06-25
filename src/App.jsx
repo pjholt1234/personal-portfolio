@@ -22,7 +22,7 @@ const App = () => {
                     </SlideInCard>
                 </div>
             </Container>
-            <Container>
+            <Container className="overflow-hidden">
                 <BubbleWrapper />
             </Container>
             <div className="py-3 px-10">

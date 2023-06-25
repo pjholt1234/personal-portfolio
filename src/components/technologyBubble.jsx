@@ -4,9 +4,9 @@ const TechnologyBubble = ({name, description, logo, bgColor}) => {
     return (
         <div className="flex">
             <div className={`grow-left rounded-full bg-blue-500 flex justify-center items-center ${bgColor}`}>
-                <i className={`${logo} text-4xl mr-auto`}></i>
-                <div className="hidden-child">
-                    I am some example text explain the technology
+                <i className={`${logo} text-7xl mr-auto`}></i>
+                <div className="ml-4 hidden-child text-sm">
+                    {description}
                 </div>
             </div>
         </div>

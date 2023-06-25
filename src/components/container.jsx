@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-const Container = ({children}) => {
+const Container = ({children, className}) => {
     return(
-        <div className={`${children} w-full h-[500px] flex items-center`}>
+        <div className={`${className} w-full h-min-[500px] flex items-center`}>
             {children}
         </div>
     )
@@ -10,5 +10,6 @@ const Container = ({children}) => {
 
 Container.propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
 }
 export default Container;
