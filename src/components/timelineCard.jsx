@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 const TimelineCard = ({heading, subheading, text, description, left, color, icon}) => {
-    console.log(description);
     return (
         <div className="flex m-2">
             {!left ?

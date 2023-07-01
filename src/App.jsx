@@ -5,6 +5,7 @@ import Bio from "./components/bio";
 import Carousel from "./components/carousel.jsx";
 import BubbleWrapper from "./components/bubbleWrapper.jsx";
 import Container from "./components/container.jsx";
+import {CarouselFilterProvider} from "./hooks/CarouselFilterContext.jsx";
 const App = () => {
 
     return (
@@ -22,12 +23,14 @@ const App = () => {
                     </SlideInCard>
                 </div>
             </Container>
-            <Container className="overflow-hidden">
-                <BubbleWrapper />
-            </Container>
-            <div className="py-3 px-10">
-                <Carousel />
-            </div>
+            <CarouselFilterProvider>
+                <Container className="overflow-hidden">
+                    <BubbleWrapper />
+                </Container>
+                <div className="py-3 px-10">
+                    <Carousel />
+                </div>
+            </CarouselFilterProvider>
         </div>
     );
 };

@@ -118,3 +118,6 @@ body {
     opacity: 1;
     transition: .4s;
 }
+
+a { color: inherit; }
+a:hover { color: inherit; }
