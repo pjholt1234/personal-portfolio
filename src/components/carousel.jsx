@@ -1,5 +1,4 @@
 import {useState, useRef, useEffect, useContext} from 'react';
-import projects from '../data/projects';
 import ProjectCard from "./projectCard.jsx";
 import ArrowLeft from "./icons/arrowLeft.jsx";
 import ArrowRight from "./icons/arrowRight.jsx";
@@ -9,21 +8,13 @@ const Carousel = () => {
     const maxScrollWidth = useRef();
     const [currentIndex, setCurrentIndex] = useState(0);
     const carousel = useRef(null);
-    const { value, updateValue } = useContext(CarouselFilterContext);
+    const { filteredProjects, value } = useContext(CarouselFilterContext);
     const movePrev = () => {
         if (currentIndex > 0) {
             setCurrentIndex((prevState) => prevState - 1);
         }
     };
 
-    const filteredProjects = projects.filter((project) => {
-        if(value === null){
-            return projects;
-        }
-
-        // Adjust the condition based on your actual filtering logic
-        return project.technology.includes(value);
-    });
 
     const moveNext = () => {
         if (
@@ -52,9 +43,7 @@ const Carousel = () => {
         if (carousel !== null && carousel.current !== null) {
             carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
         }
-
-        console.log(value);
-    }, [currentIndex, value]);
+    }, [currentIndex, filteredProjects]);
 
     useEffect(() => {
         maxScrollWidth.current = carousel.current

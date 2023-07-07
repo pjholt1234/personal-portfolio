@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect, useContext} from 'react';
 import PropTypes from 'prop-types';
+import {CarouselFilterContext} from "../hooks/CarouselFilterContext.jsx";
 
 const ProjectCard = ({
     images = [],
@@ -14,6 +15,11 @@ const ProjectCard = ({
     const [isHovered, setIsHovered] = useState(false);
     const [currentImage, setCurrentImage] = useState(images[0]);
     const [imageIndex, setImageIndex] = useState(0);
+    const { value } = useContext(CarouselFilterContext);
+
+    useEffect( () => {
+        setCurrentImage(images[0]);
+    }, [value]);
 
     useEffect(() => {
         if(images.length <= 0){
@@ -54,8 +60,7 @@ const ProjectCard = ({
     const outputTechnologyList = () => {
         if(technology.length === 0) return null;
 
-
-        var count = 0;
+        let count = 0;
         const technologyList = technology.map((item) => {
             count ++;
             return (

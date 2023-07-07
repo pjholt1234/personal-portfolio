@@ -2,7 +2,6 @@ import technologies from "../data/technologies";
 import TechnologyBubble from "./technologyBubble.jsx";
 import BubbleRow from "./bubbleRow.jsx";
 import useWindowBreakpoint from "../hooks/useWindowBreakpoint.js";
-import {CarouselFilterProvider} from "../hooks/CarouselFilterContext";
 
 const BubbleWrapper = () => {
     const breakpoint = useWindowBreakpoint();
