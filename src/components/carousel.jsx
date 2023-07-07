@@ -8,7 +8,7 @@ const Carousel = () => {
     const maxScrollWidth = useRef();
     const [currentIndex, setCurrentIndex] = useState(0);
     const carousel = useRef(null);
-    const { filteredProjects, value } = useContext(CarouselFilterContext);
+    const { filteredProjects } = useContext(CarouselFilterContext);
     const movePrev = () => {
         if (currentIndex > 0) {
             setCurrentIndex((prevState) => prevState - 1);
