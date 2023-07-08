@@ -1,11 +1,13 @@
 import Title from "./components/title.jsx";
 import SlideInCard from "./components/slideInCard.jsx";
-import Timeline from "./components/timeline.jsx";
 import Bio from "./components/bio";
 import Carousel from "./components/carousel.jsx";
 import BubbleWrapper from "./components/bubbleWrapper.jsx";
 import Container from "./components/container.jsx";
 import { CarouselFilterProvider } from "./hooks/CarouselFilterContext.jsx";
+import TimelineWrapper from "./components/timeline/timelineWrapper.jsx";
+import { EventSelectedProvider } from "./hooks/EventSelectedContext.jsx";
+import EventInfoWrapper from "./components/timeline/eventInfoWrapper.jsx";
 const App = () => {
   return (
     <div className="w-full">
@@ -17,8 +19,11 @@ const App = () => {
           </SlideInCard>
         </div>
         <div className="w-1/2">
-          <SlideInCard right={true} triggerOnce={true}>
-            <Timeline />
+          <SlideInCard triggerOnce={true} right={true}>
+            <EventSelectedProvider>
+              <EventInfoWrapper />
+              <TimelineWrapper />
+            </EventSelectedProvider>
           </SlideInCard>
         </div>
       </Container>

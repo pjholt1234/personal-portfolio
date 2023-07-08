@@ -1,5 +1,5 @@
 import TimelineCard from "./timelineCard.jsx";
-import events from "../data/events";
+import events from "../../data/events.js";
 
 const Timeline = () => {
   var count = 0;
