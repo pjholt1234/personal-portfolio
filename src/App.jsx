@@ -19,12 +19,7 @@ const App = () => {
           </SlideInCard>
         </div>
         <div className="w-1/2">
-          <SlideInCard triggerOnce={true} right={true}>
-            <EventSelectedProvider>
-              <EventInfoWrapper />
-              <TimelineWrapper />
-            </EventSelectedProvider>
-          </SlideInCard>
+          <SlideInCard triggerOnce={true} right={true}></SlideInCard>
         </div>
       </Container>
       <CarouselFilterProvider>
@@ -35,6 +30,10 @@ const App = () => {
           <Carousel />
         </div>
       </CarouselFilterProvider>
+      <EventSelectedProvider>
+        <EventInfoWrapper />
+        <TimelineWrapper />
+      </EventSelectedProvider>
     </div>
   );
 };

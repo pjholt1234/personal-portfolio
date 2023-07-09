@@ -5,23 +5,23 @@ const TimelineWrapper = () => {
   const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024];
   const colCount = years.length + 1;
   return (
-    <div className={`w-full grid grid-rows-4`}>
+    <div className={``}>
       {/*education*/}
-      <TimelineRow colCount={colCount} rowNumber={1}>
+      <TimelineRow colCount={colCount}>
         <EventLine
           bgColor="bg-green-500"
           id="uni"
-          colStart={2}
-          colSpan={3}
+          colStart="2"
+          colSpan="3"
         ></EventLine>
       </TimelineRow>
       {/*career*/}
-      <TimelineRow colCount={colCount} rowNumber={2}>
+      <TimelineRow colCount={colCount}>
         <EventLine
           bgColor="bg-red-500"
           id="work"
-          colStart={5}
-          colSpan={3}
+          colStart="5"
+          colSpan="3"
         ></EventLine>
       </TimelineRow>
       <DateBlockWrapper colCount={colCount} years={years} />

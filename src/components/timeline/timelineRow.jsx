@@ -1,10 +1,8 @@
 import PropTypes from "prop-types";
 
-const TimelineRow = ({ children, className, colCount, rowNumber }) => {
+const TimelineRow = ({ children, className = "", colCount }) => {
   return (
-    <div
-      className={`${className} grid grid-cols-${colCount} h-[50px] row-start-${rowNumber}`}
-    >
+    <div className={`${className} grid grid-cols-${colCount} h-[50px]`}>
       {/*Padding column*/}
       <div className="col-span-1"></div>
       {children}
@@ -16,7 +14,6 @@ TimelineRow.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   colCount: PropTypes.number,
-  rowNumber: PropTypes.number,
 };
 
 export default TimelineRow;

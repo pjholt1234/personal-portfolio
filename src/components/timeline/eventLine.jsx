@@ -5,6 +5,9 @@ const EventLine = ({ id, bgColor, colStart, colSpan }) => {
   const [focused, setFocused] = useState(true);
   const { selectedEvent, updateSelectedEvent } =
     useContext(EventSelectedContext);
+
+  const opacity = focused ? "opacity-100" : "opacity-50";
+
   const selectEvent = () => {
     if (selectedEvent === id) {
       updateSelectedEvent(null);
@@ -27,9 +30,7 @@ const EventLine = ({ id, bgColor, colStart, colSpan }) => {
     <div
       onClick={selectEvent}
       id={id}
-      className={`${
-        focused ? "opacity-100" : "opacity-50"
-      } ${bgColor} col-start-${colStart} col-span-${colSpan} rounded-full h-[10px]`}
+      className={`${opacity} ${bgColor} col-start-${colStart} col-span-${colSpan} rounded-full h-[10px]`}
     ></div>
   );
 };
@@ -37,8 +38,8 @@ const EventLine = ({ id, bgColor, colStart, colSpan }) => {
 EventLine.propTypes = {
   id: PropTypes.string,
   bgColor: PropTypes.string,
-  colStart: PropTypes.number,
-  colSpan: PropTypes.number,
+  colStart: PropTypes.string,
+  colSpan: PropTypes.string,
 };
 
 export default EventLine;
