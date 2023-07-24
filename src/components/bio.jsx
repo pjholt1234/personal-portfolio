@@ -1,7 +1,7 @@
 import image from "../assets/bio-photo.png";
 const Bio = () => {
   return (
-    <div className="flex p-4">
+    <div className="flex">
       <img
         src={image}
         placeholder="profile-photo"
