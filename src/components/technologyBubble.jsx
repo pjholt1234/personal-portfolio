@@ -21,7 +21,7 @@ const TechnologyBubble = ({ name, description, logo, bgColor }) => {
   }
 
   return (
-    <a onClick={handleClick}>
+    <a onClick={handleClick} className="cursor-pointer">
       <div className="flex">
         <div
           className={`grow-left rounded-full bg-blue-500 flex justify-center items-center ${bgColor} ${border}`}
