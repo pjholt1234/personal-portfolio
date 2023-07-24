@@ -11,8 +11,9 @@ const TimelineWrapper = () => {
         <EventLine
           bgColor="bg-green-500"
           id="uni"
-          colStart="2"
-          colSpan="3"
+          colStart={2}
+          colSpan={3}
+          icon="fa-regular fa-graduation-cap"
         ></EventLine>
       </TimelineRow>
       {/*career*/}
@@ -20,8 +21,8 @@ const TimelineWrapper = () => {
         <EventLine
           bgColor="bg-red-500"
           id="work"
-          colStart="5"
-          colSpan="3"
+          colStart={5}
+          colSpan={3}
         ></EventLine>
       </TimelineRow>
       <DateBlockWrapper colCount={colCount} years={years} />
