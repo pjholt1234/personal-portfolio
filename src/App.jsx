@@ -12,14 +12,19 @@ const App = () => {
   return (
     <div className="w-full">
       <Title />
-      <Container>
+      <Container className="h-[600px]">
         <div className="w-1/2">
           <SlideInCard triggerOnce={true}>
             <Bio />
           </SlideInCard>
         </div>
         <div className="w-1/2">
-          <SlideInCard triggerOnce={true} right={true}></SlideInCard>
+          <SlideInCard triggerOnce={true} right={true}>
+            <EventSelectedProvider>
+              <EventInfoWrapper />
+              <TimelineWrapper />
+            </EventSelectedProvider>
+          </SlideInCard>
         </div>
       </Container>
       <CarouselFilterProvider>
@@ -30,10 +35,6 @@ const App = () => {
           <Carousel />
         </div>
       </CarouselFilterProvider>
-      <EventSelectedProvider>
-        <EventInfoWrapper />
-        <TimelineWrapper />
-      </EventSelectedProvider>
     </div>
   );
 };

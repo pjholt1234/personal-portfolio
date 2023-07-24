@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
 import { useContext, useEffect, useState } from "react";
 import { EventSelectedContext } from "../../hooks/EventSelectedContext.jsx";
-const EventLine = ({ id, bgColor, colStart, colSpan, icon = null }) => {
+const EventLine = ({
+  id,
+  bgColor,
+  colStart,
+  colSpan,
+  icon = null,
+  title = "",
+}) => {
   const [focused, setFocused] = useState(true);
   const { selectedEvent, updateSelectedEvent } =
     useContext(EventSelectedContext);
@@ -31,8 +38,11 @@ const EventLine = ({ id, bgColor, colStart, colSpan, icon = null }) => {
       onClick={selectEvent}
       id={id}
       style={{ gridColumn: `${colStart} / ${colStart + colSpan}` }}
-      className={`${opacity} ${bgColor} rounded-full h-[15px]`}
-    ></div>
+      className={`${opacity} ${bgColor} rounded-full h-[30px] cursor-pointer`}
+    >
+      {icon != null ? <i className={`ml-2 mt-[7px] ${icon}`}></i> : ""}
+      <span className="ml-2">{title ?? ""}</span>
+    </div>
   );
 };
 
@@ -41,6 +51,8 @@ EventLine.propTypes = {
   bgColor: PropTypes.string,
   colStart: PropTypes.number,
   colSpan: PropTypes.number,
+  icon: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default EventLine;

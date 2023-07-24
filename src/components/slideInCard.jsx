@@ -18,7 +18,7 @@ const SlideInCard = ({
   return (
     <InView
       as="div"
-      className={`${className} my-5 px-2 w-full ${
+      className={`${className} my-5 px-4 w-full ${
         visible ? "animate-" + direction : ""
       }`}
       onChange={(inView) => setVisible(inView)}
