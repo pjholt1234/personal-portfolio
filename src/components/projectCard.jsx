@@ -11,6 +11,7 @@ const ProjectCard = ({
   description = "",
   technology = [],
   imgAlignment = "",
+  projectId = "",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentImage, setCurrentImage] = useState(images[0]);
@@ -74,30 +75,32 @@ const ProjectCard = ({
   };
 
   return (
-    <div
-      className="relative w-[400px] h-[400px] overflow-hidden rounded-lg shadow-md"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <img
-        src={currentImage}
-        alt="ProjectCard Image"
-        className={`w-full h-full object-cover ${imgAlignment}`}
-      />
+    <a href={`/projects/${projectId}`}>
       <div
-        className={`absolute inset-0 p-4 ${bgColor} bg-opacity-80 text-white transition-all ${
-          isHovered ? "top-0" : "top-[310px]"
-        }`}
+        className="relative w-[400px] h-[400px] overflow-hidden rounded-lg shadow-md"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        <div className="flex">
-          <h2>{title}</h2>
-          {outputGitHubLink()}
+        <img
+          src={currentImage}
+          alt="ProjectCard Image"
+          className={`w-full h-full object-cover ${imgAlignment}`}
+        />
+        <div
+          className={`absolute inset-0 p-4 ${bgColor} bg-opacity-80 text-white transition-all ${
+            isHovered ? "top-0" : "top-[310px]"
+          }`}
+        >
+          <div className="flex">
+            <h2>{title}</h2>
+            {outputGitHubLink()}
+          </div>
+          <h3 className="font-medium mb-3">{date}</h3>
+          <p className="text-white mb-3">{description}</p>
+          {outputTechnologyList()}
         </div>
-        <h3 className="font-medium mb-3">{date}</h3>
-        <p className="text-white mb-3">{description}</p>
-        {outputTechnologyList()}
       </div>
-    </div>
+    </a>
   );
 };
 
@@ -110,6 +113,7 @@ ProjectCard.propTypes = {
   description: PropTypes.string,
   technology: PropTypes.array,
   imgAlignment: PropTypes.string,
+  projectId: PropTypes.string,
 };
 
 export default ProjectCard;

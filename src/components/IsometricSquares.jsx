@@ -7,6 +7,7 @@ const IsometricSquares = ({ technologies }) => {
     const topValue = index * 40;
     const zIndexValue = -1 * (index + 1);
     const colours = [
+      "bg-pink-500",
       "bg-orange-500",
       "bg-green-500",
       "bg-purple-500",
