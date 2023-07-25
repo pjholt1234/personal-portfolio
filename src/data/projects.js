@@ -2,6 +2,7 @@ import * as images from "../assets/index.js";
 
 const projects = [
   {
+    id: "dissertation",
     images: [
       images.disLoginPage,
       images.disPlanning1,
@@ -18,10 +19,11 @@ const projects = [
     gitHubLink: "https://github.com/pjholt1234/ExerciseWebCompanion",
     description:
       "My final year dissertation was my first large-scale web application. My idea for the project was to create a tool for planning, scheduling and tracking workouts.",
-    technology: ["PHP", "Javascript", "JQuery", "MySql", "CSS"],
+    technology: ["PHP", "MySql", "Javascript", "JQuery", "CSS"],
     imgAlignment: null,
   },
   {
+    id: "notion-steam-app",
     images: [images.notionSteamApp],
     title: "Steam Market Price Tracker",
     date: "Mar 2023 - May 2023",
@@ -40,8 +42,9 @@ const projects = [
     imgAlignment: "object-left-top",
   },
   {
+    id: "personal-portfolio-v2",
     images: [images.portfolio1, images.portfolio2],
-    title: "Personal Portfolio",
+    title: "Personal Portfolio V2",
     date: "June 2023 - Present",
     bgColor: "bg-green-700",
     gitHubLink: "https://github.com/pjholt1234/personal-portfolio",

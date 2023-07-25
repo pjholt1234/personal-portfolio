@@ -121,3 +121,26 @@ body {
 
 a { color: inherit; }
 a:hover { color: inherit; }
+
+.isometric-square {
+    transform: rotateX(60deg) rotateZ(-45deg);
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 30px;
+}
+
+.square-container {
+    position: relative;
+    padding: 50px;
+}
+
+.text-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 8px;
+}
+
+

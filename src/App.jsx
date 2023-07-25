@@ -1,11 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Index from "./Pages/index.jsx";
+import Index from "./Pages/Index.jsx";
+import Project from "./Pages/Project.jsx";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />}></Route>
+        <Route index path="/" element={<Index />} />
+        <Route path="project/:projectId" element={<Project />}></Route>
       </Routes>
     </BrowserRouter>
   );
