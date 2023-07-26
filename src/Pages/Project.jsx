@@ -22,19 +22,41 @@ const Project = () => {
   }
 
   let technologies = project.technology.slice().reverse();
+
+  const renderLinks = project?.links?.map((link, index) => {
+    const icon = link?.icon;
+    return (
+      <a
+        key={`${link.text}-${index}`}
+        href={link.link}
+        className="text-lg flex items-center"
+      >
+        {icon != null ? <i className={`${icon} w-7`}></i> : ""}
+        {link.text}
+      </a>
+    );
+  });
+
   return (
     <div className="grid grid-cols-2 w-full">
       <div className="col-span-1 p-5 w-full">
         <div className="flex items-baseline w-full">
-          <h1>{project.title}</h1>
-          <a className="ml-auto mr-0" href={project.gitHubLink}>
+          <h1>{project?.title}</h1>
+          <a className="ml-auto mr-0" href={project?.gitHubLink}>
             <i className="text-white text-4xl fa-brands fa-github"></i>
           </a>
         </div>
-        <h3 className="ml-auto mr-0 italic mb-4">{project.date}</h3>
         <div className="flex">
-          <div className="w-1/2"></div>
-          <div className="w-1/2">
+          <div>
+            <h3 className="ml-auto mr-0 italic">{project?.date}</h3>
+            <div className="mt-5 flex overflow-wrap space-x-4">
+              {renderLinks}
+            </div>
+            <p className="mt-5">
+              {project?.longDescription ?? project?.description}
+            </p>
+          </div>
+          <div className="flex ml-10">
             <IsometricSquares technologies={technologies} />
           </div>
         </div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 const IsometricSquares = ({ technologies }) => {
   const [technologiesArray, SetTechnologiesArray] = useState(technologies);
   const renderSquare = (technology, index) => {
-    const topValue = index * 40;
+    const topValue = index * 30;
     const zIndexValue = -1 * (index + 1);
     const colours = [
       "bg-pink-500",
@@ -22,7 +22,7 @@ const IsometricSquares = ({ technologies }) => {
         style={{ top: `${topValue}px`, zIndex: zIndexValue }}
       >
         <div className="text-container w-full">
-          <span className="text-4xl">{technology}</span>
+          <span className="text-2xl">{technology}</span>
         </div>
       </div>
     );
