@@ -93,6 +93,43 @@ const projects = [
       },
     ],
   },
+  {
+    id: "data-mining",
+    images: [
+      files.aproiri,
+      files.aproiriEvaluation,
+      files.corrMatrix,
+      files.customerBehaviour,
+      files.firstRecommender,
+      files.hybrid,
+      files.hybridEvaluation,
+    ],
+    title: "Intro to data science",
+    date: "Jan 2021 - April 2021",
+    bgColor: "bg-purple-800",
+    gitHubLink:
+      "https://github.com/pjholt1234/RetailRocketNoteBook/blob/main/Group_1.ipynb",
+    description:
+      "This group project was an introduction to data science. Within this module I was fortunate to be given the " +
+      "chance to learn about machine learning and data mining which culminated in this final project where we had to " +
+      "build a store item recommender based on the retail rocket dataset.",
+    technology: [
+      "Python",
+      "Pandas",
+      "sklearn",
+      "Matplot",
+      "mlxtend",
+      "LightFM",
+    ],
+    imgAlignment: "object-left-top",
+    links: [
+      {
+        link: "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset",
+        text: "Retail rocket dataset",
+        icon: "fa-solid fa-file",
+      },
+    ],
+  },
 ];
 
 export default projects;
