@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import projects from "../data/projects.js";
-import PageNotFound from "../components/PageNotFound.jsx";
+import PageNotFound from "../components/pageNotFound.jsx";
 import ProjectCard from "../components/projectCard.jsx";
 import IsometricSquares from "../components/IsometricSquares.jsx";
+import Gallery from "../components/gallery.jsx";
 const Project = () => {
   const { projectId } = useParams();
   const [project, setProject] = useState(null);
@@ -61,7 +62,9 @@ const Project = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-1 p-5"></div>
+      <div className="col-span-1 p-10">
+        <Gallery images={project?.images} />
+      </div>
     </div>
   );
 };
