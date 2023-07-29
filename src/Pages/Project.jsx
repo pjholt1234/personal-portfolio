@@ -5,6 +5,7 @@ import PageNotFound from "../components/pageNotFound.jsx";
 import ProjectCard from "../components/projectCard.jsx";
 import IsometricSquares from "../components/IsometricSquares.jsx";
 import Gallery from "../components/gallery.jsx";
+import SplitStringToParagraphs from "../components/spiltStringToParagraphs.jsx";
 const Project = () => {
   const { projectId } = useParams();
   const [project, setProject] = useState(null);
@@ -38,6 +39,18 @@ const Project = () => {
     );
   });
 
+  const hasReflections = () => {
+    if (!project?.hasReflections) {
+      return false;
+    }
+
+    if (project?.reflections === "" || project?.reflections === null) {
+      return false;
+    }
+
+    return true;
+  };
+
   return (
     <div className="grid grid-cols-2 w-full">
       <div className="col-span-1 p-5 w-full">
@@ -65,6 +78,13 @@ const Project = () => {
       <div className="col-span-1 p-10">
         <Gallery images={project?.images} />
       </div>
+      {hasReflections ? (
+        <div className="col-span-1 p-5">
+          <SplitStringToParagraphs text={project?.reflections} />
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

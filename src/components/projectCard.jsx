@@ -38,7 +38,7 @@ const ProjectCard = ({
     }, 5000);
 
     return () => clearInterval(intervalId);
-  }, [imageIndex, images]);
+  }, [imageIndex, images, value]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
