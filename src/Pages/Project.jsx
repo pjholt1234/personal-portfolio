@@ -22,7 +22,7 @@ const Project = () => {
     return <PageNotFound />;
   }
 
-  let technologies = project.technology.slice().reverse();
+  const technologies = project.technology.slice().reverse();
 
   const renderLinks = project?.links?.map((link, index) => {
     const icon = link?.icon;
@@ -50,10 +50,15 @@ const Project = () => {
     return true;
   };
 
+  const rows = hasReflections() ? "grid-rows-2" : "grid-rows-1";
+  const galleryRowSpan = hasReflections()
+    ? "row-span-2 items-center"
+    : "row-span-1";
+
   return (
-    <div className="grid grid-cols-2 w-full">
-      <div className="col-span-1 p-5 w-full">
-        <div className="flex items-baseline w-full">
+    <div className={`grid grid-cols-2 w-full ${rows}`}>
+      <div className="col-span-1 p-5">
+        <div className="flex items-baseline">
           <h1>{project?.title}</h1>
           <a className="ml-auto mr-0" href={project?.gitHubLink}>
             <i className="text-white text-4xl fa-brands fa-github"></i>
@@ -74,10 +79,10 @@ const Project = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-1 p-10">
+      <div className={`flex col-span-1 p-10 ${galleryRowSpan}`}>
         <Gallery images={project?.images} />
       </div>
-      {hasReflections ? (
+      {hasReflections() ? (
         <div className="col-span-1 p-5">
           <h2>Reflections</h2>
           <SplitStringToParagraphs text={project?.reflections} />
