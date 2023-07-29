@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const TimelineRow = ({ children, className = "", colCount }) => {
+const TimelineRow = ({ children, className = "", colCount = 8 }) => {
   const gridCols = `grid-cols-${colCount}`;
 
   return (
