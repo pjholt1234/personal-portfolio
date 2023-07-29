@@ -7,12 +7,13 @@ const EventInfoCard = ({ event }) => {
   return (
     <div className="w-full my-5">
       <div className="flex">
-        <h3>{event !== undefined ? event.heading : ""}</h3>
-        <p className="italic font-semibold ml-auto mr-0">
-          {event !== undefined ? event.subheading : ""}
-        </p>
+        <a className="flex" href={`/events/${event.id}`}>
+          <h3>{event?.heading}</h3>
+          <i className="pl-4 fa-solid fa-arrow-right-from-bracket mt-[6px]"></i>
+        </a>
+        <p className="italic font-semibold ml-auto mr-0">{event?.subheading}</p>
       </div>
-      <p>{event !== undefined ? event.description : ""}</p>
+      <p>{event?.description}</p>
     </div>
   );
 };

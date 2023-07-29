@@ -1,5 +1,6 @@
 const events = {
   uni: {
+    id: "uni",
     heading: "University of the West of England",
     subheading: "Sept 2018 - June 2021",
     text: "First Class Bachelor of Science, Business Computing",
@@ -9,6 +10,7 @@ const events = {
     icon: "fa-solid fa-graduation-cap",
   },
   work: {
+    id: "lightflows",
     heading: "Lightflows",
     subheading: "Oct 2021 - Present",
     text: "Junior Web Developer",
