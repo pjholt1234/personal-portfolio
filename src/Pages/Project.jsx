@@ -23,7 +23,7 @@ const Project = () => {
   }
 
   let additionalNavItems = [];
-  project?.scrollPanels.map((panel) => {
+  project?.scrollPanels?.map((panel) => {
     additionalNavItems.push(panel.title);
   });
 

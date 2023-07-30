@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const ProjectLinks = ({ links }) => {
-  if (links.length <= 0) {
+  if (!Array.isArray(links) || links.length <= 0) {
     return null;
   }
 
