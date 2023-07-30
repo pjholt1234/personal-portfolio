@@ -113,14 +113,6 @@ const projects = [
       "I achieved this primarily with, MySql, PHP, and Javascript. It was the first of many things for me and I learnt " +
       "a great deal surrounding web development and broader application development. Key takeaways from this project " +
       "were, planning and design methods such as UML + agile, database design, and fundamentals of how the web works.",
-    hasReflections: true,
-    reflections:
-      "I’m writing this over a year in the future so when looking over this project I see many mistakes I made. " +
-      "However, I have to remind myself that I was only at the beginning of my coding career. If I could go back and " +
-      "give myself some advice it would be, to do some more research. \n These include which I hard-coded which could " +
-      "have been achieved in a simple framework. I wrote some crazy string concatenation things for the sole purpose of " +
-      "tracking the position of an element in a sortable list. I wrote many raw SQL queries which could have been handled " +
-      "by something like Laravel or a similar ORM.",
     links: [
       {
         link: "https://www.youtube.com/watch?v=DuZjvRmZTzM",
@@ -131,6 +123,19 @@ const projects = [
         link: files.disReport,
         text: "Report",
         icon: "fa-solid fa-file",
+      },
+    ],
+    scrollPanels: [
+      {
+        title: "Reflections",
+        type: "text",
+        text:
+          "I’m writing this over a year in the future so when looking over this project I see many mistakes I made. " +
+          "However, I have to remind myself that I was only at the beginning of my coding career. If I could go back and " +
+          "give myself some advice it would be, to do some more research. \n These include which I hard-coded which could " +
+          "have been achieved in a simple framework. I wrote some crazy string concatenation things for the sole purpose of " +
+          "tracking the position of an element in a sortable list. I wrote many raw SQL queries which could have been handled " +
+          "by something like Laravel or a similar ORM.",
       },
     ],
   },

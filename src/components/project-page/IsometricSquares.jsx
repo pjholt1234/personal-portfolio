@@ -2,7 +2,9 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 const IsometricSquares = ({ technologies }) => {
-  const [technologiesArray, SetTechnologiesArray] = useState(technologies);
+  const [technologiesArray, SetTechnologiesArray] = useState(
+    technologies.slice().reverse(),
+  );
   const renderSquare = (technology, index) => {
     const topValue = index * 30;
     const zIndexValue = -1 * (index + 1);
@@ -22,7 +24,7 @@ const IsometricSquares = ({ technologies }) => {
         style={{ top: `${topValue}px`, zIndex: zIndexValue }}
       >
         <div className="text-container w-full">
-          <span className="text-2xl">{technology}</span>
+          <span className="text-3xl">{technology}</span>
         </div>
       </div>
     );
