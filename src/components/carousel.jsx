@@ -51,7 +51,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel my-12 mx-auto">
+    <div className="carousel mx-auto">
       <div className="relative overflow-hidden">
         <div className="flex justify-between absolute top left w-full h-full">
           <button
@@ -73,7 +73,7 @@ const Carousel = () => {
         </div>
         <div
           ref={carousel}
-          className="carousel-container relative flex gap-4 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+          className="relative flex gap-4 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
         >
           {filteredProjects.map((project, index) => {
             return (

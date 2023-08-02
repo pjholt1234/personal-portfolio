@@ -24,7 +24,7 @@ const Gallery = ({ images, delay = 5 }) => {
   }, [imageIndex]);
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-5">
       {currentImage != null ? (
         <img src={currentImage} alt="Gallery Image" />
       ) : (

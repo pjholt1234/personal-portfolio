@@ -39,7 +39,7 @@ const BubbleWrapper = () => {
     slideInDirectionRight = !slideInDirectionRight;
   }
 
-  return <div className="w-full">{rows}</div>;
+  return <div className="w-full my-10">{rows}</div>;
 };
 
 const getRowLength = (breakpoint, rowIndex) => {

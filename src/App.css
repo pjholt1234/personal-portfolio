@@ -104,19 +104,21 @@ body {
     flex-grow: 1;
 }
 
-.grow-left:hover {
-    width: 700px;
+@media screen and (min-width: 1370px) {
+    .grow-left:hover {
+        width: 700px;
+    }
+
+    .grow-left:hover .hidden-child{
+        display: flex;
+        opacity: 1;
+        transition: .4s;
+    }
 }
 
 .hidden-child {
     opacity: 0;
     display: none;
-}
-
-.grow-left:hover .hidden-child{
-    display: flex;
-    opacity: 1;
-    transition: .4s;
 }
 
 a { color: inherit; }

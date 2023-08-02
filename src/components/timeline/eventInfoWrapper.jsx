@@ -11,7 +11,7 @@ const EventInfoWrapper = () => {
   }, [selectedEvent]);
 
   return (
-    <div>
+    <div className="px-5">
       <EventInfoCard event={event} />
     </div>
   );

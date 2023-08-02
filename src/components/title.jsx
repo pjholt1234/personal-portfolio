@@ -18,7 +18,7 @@ const Title = () => {
       </div>
       <div className="flex justify-center h-screen items-center">
         <div>
-          <h1 className="text-10xl shadow-outline">PJ Holt</h1>
+          <h1 className="text-5xl sm:text-10xl shadow-outline">PJ Holt</h1>
           <h2 className="text-3xl">Web developer</h2>
         </div>
       </div>

@@ -34,21 +34,21 @@ const Project = () => {
 
   return (
     <VisibleProjectPanelProvider navItems={navItems}>
-      <div className="flex space-x-12">
-        <div className="w-1/2 relative">
-          <div className="h-screen sticky top-0 left-0 w-full p-12 items-center h-full flex">
-            <div className="w-full">
-              <div className="flex items-baseline">
-                <h1>{project?.title}</h1>
-                <a className="ml-auto mr-0" href={project?.gitHubLink}>
-                  <i className="text-white text-4xl fa-brands fa-github"></i>
-                </a>
-              </div>
-              <h3 className="italic">{project?.date}</h3>
-              <ProjectLinks links={project?.links} />
-              <ProjectNavWrapper navItems={navItems} />
-              <Gallery images={project?.images} />
+      <div className="md:grid md:grid-cols-2">
+        <div className="h-screen md:sticky top-0 left-0 w-full p-12 items-center h-full flex">
+          <div className="w-full">
+            <div className="flex items-baseline">
+              <h1>{project?.title}</h1>
+              <a className="ml-auto mr-0" href={project?.gitHubLink}>
+                <i className="text-white text-4xl fa-brands fa-github"></i>
+              </a>
             </div>
+            <h3 className="italic">{project?.date}</h3>
+            <ProjectLinks links={project?.links} />
+            <div className="hidden md:flex">
+              <ProjectNavWrapper navItems={navItems} />
+            </div>
+            <Gallery images={project?.images} />
           </div>
         </div>
         <ProjectScrollPanelsWrapper project={project} />

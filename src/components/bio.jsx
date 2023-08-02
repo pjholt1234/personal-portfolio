@@ -1,13 +1,13 @@
 import image from "../assets/bio-photo.png";
 const Bio = () => {
   return (
-    <div className="flex">
+    <div className="grid lg:grid-cols-3 grid-cols-1 px-4">
       <img
         src={image}
         placeholder="profile-photo"
-        className="h-[300px] rounded-lg"
+        className="object-contain w-full rounded-lg m-2 max-h-[300px]"
       />
-      <div className="px-4 h-[300px] ml-2 rounded-lg flex flex-wrap">
+      <div className="min-h-[300px] px-4 sm:ml-2 rounded-lg flex flex-wrap col-span-2">
         <h2 className="">About me</h2>
         <p className="text-sm mb-2">
           Welcome to my portfolio. Here is quick run down about me. I currently

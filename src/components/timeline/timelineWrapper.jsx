@@ -5,7 +5,7 @@ const TimelineWrapper = () => {
   const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
   const colCount = years.length;
   return (
-    <div className="mx-auto">
+    <div className="px-10">
       {/*career*/}
       <TimelineRow colCount={colCount}>
         <EventLine
