@@ -16,16 +16,11 @@ const EventLine = ({
   const opacity = focused ? "opacity-100" : "opacity-50";
 
   const selectEvent = () => {
-    if (selectedEvent === id) {
-      updateSelectedEvent(null);
-      return;
-    }
-
     updateSelectedEvent(id);
   };
 
   useEffect(() => {
-    if (selectedEvent === id || selectedEvent === null) {
+    if (selectedEvent === id) {
       setFocused(true);
       return;
     }
@@ -41,7 +36,7 @@ const EventLine = ({
       className={`${opacity} ${bgColor} rounded-full h-[30px] cursor-pointer`}
     >
       {icon != null ? <i className={`ml-2 mt-[7px] ${icon}`}></i> : ""}
-      <span className="ml-2">{title ?? ""}</span>
+      <span className="ml-2 text-sm md:text-md">{title ?? ""}</span>
     </div>
   );
 };
