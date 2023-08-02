@@ -16,7 +16,9 @@ const EventLine = ({
   const opacity = focused ? "opacity-100" : "opacity-50";
 
   const selectEvent = () => {
-    updateSelectedEvent(id);
+    if (id !== selectedEvent) {
+      updateSelectedEvent(id);
+    }
   };
 
   useEffect(() => {
