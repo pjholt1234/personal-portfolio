@@ -6,7 +6,7 @@ const ProjectNavWrapper = ({ navItems }) => {
     return <NavIndicator title={item} key={item} />;
   });
 
-  return <div>{renderedNavItems}</div>;
+  return <div className="my-10">{renderedNavItems}</div>;
 };
 
 export default ProjectNavWrapper;

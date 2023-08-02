@@ -20,14 +20,11 @@ const ProjectScrollPanelsWrapper = ({ project }) => {
         <h2>Description</h2>
         <p>{project?.longDescription ?? project?.description}</p>
       </HighlightContainer>
-      <HighlightContainer
-        className="h-[350px] w-full flex justify-center p-4"
-        containerId="Tech Stack"
-      >
-        <IsometricSquares technologies={project.technology} />
-      </HighlightContainer>
-      <HighlightContainer className="flex mb-10 p-10" containerId="Gallery">
-        <Gallery images={project?.images} />
+      <HighlightContainer className="w-full p-4" containerId="Tech Stack">
+        <h2>Tech Stack</h2>
+        <div className="h-[300px] w-full flex justify-center">
+          <IsometricSquares technologies={project.technology} />
+        </div>
       </HighlightContainer>
       {additionalScrollPanels}
     </div>
