@@ -5,6 +5,8 @@ import PageNotFound from "../components/pageNotFound.jsx";
 import ProjectLinks from "../components/project-page/projectLinks.jsx";
 import ProjectScrollPanelsWrapper from "../components/project-page/projectScrollPanelsWrapper.jsx";
 import ProjectNavWrapper from "../components/project-page/projectNavWrapper.jsx";
+import { VisibleProjectPanelProvider } from "../hooks/VisibleProjectPanelContext.jsx";
+
 const Project = () => {
   const { projectId } = useParams();
   const [project, setProject] = useState(null);
@@ -35,22 +37,24 @@ const Project = () => {
   ];
 
   return (
-    <div className="flex space-x-12">
-      <div className="w-1/2 relative">
-        <div className="h-screen sticky top-0 left-0 w-full p-12 text-white">
-          <div className="flex items-baseline">
-            <h1>{project?.title}</h1>
-            <a className="ml-auto mr-0" href={project?.gitHubLink}>
-              <i className="text-white text-4xl fa-brands fa-github"></i>
-            </a>
+    <VisibleProjectPanelProvider navItems={navItems}>
+      <div className="flex space-x-12">
+        <div className="w-1/2 relative">
+          <div className="h-screen sticky top-0 left-0 w-full p-12 text-white">
+            <div className="flex items-baseline">
+              <h1>{project?.title}</h1>
+              <a className="ml-auto mr-0" href={project?.gitHubLink}>
+                <i className="text-white text-4xl fa-brands fa-github"></i>
+              </a>
+            </div>
+            <h3 className="italic">{project?.date}</h3>
+            <ProjectLinks links={project?.links} />
+            <ProjectNavWrapper navItems={navItems} />
           </div>
-          <h3 className="italic">{project?.date}</h3>
-          <ProjectLinks links={project?.links} />
-          <ProjectNavWrapper navItems={navItems} />
         </div>
+        <ProjectScrollPanelsWrapper project={project} />
       </div>
-      <ProjectScrollPanelsWrapper project={project} />
-    </div>
+    </VisibleProjectPanelProvider>
   );
 };
 

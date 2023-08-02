@@ -7,7 +7,7 @@ import SplitStringToParagraphs from "../spiltStringToParagraphs.jsx";
 const ProjectScrollPanelsWrapper = ({ project }) => {
   const additionalScrollPanels = project?.scrollPanels?.map((panel, index) => {
     return (
-      <HighlightContainer className="p-4" key={index}>
+      <HighlightContainer className="p-4" key={index} containerId={panel.title}>
         <h2>{panel?.title}</h2>
         <SplitStringToParagraphs text={panel?.text} />
       </HighlightContainer>
@@ -16,14 +16,17 @@ const ProjectScrollPanelsWrapper = ({ project }) => {
 
   return (
     <div className="w-1/2 min-h-screen p-4">
-      <HighlightContainer className="mb-10 p-4">
+      <HighlightContainer className="mb-10 p-4" containerId="Description">
         <h2>Description</h2>
         <p>{project?.longDescription ?? project?.description}</p>
       </HighlightContainer>
-      <HighlightContainer className="h-[350px] w-full flex justify-center p-4">
+      <HighlightContainer
+        className="h-[350px] w-full flex justify-center p-4"
+        containerId="Tech Stack"
+      >
         <IsometricSquares technologies={project.technology} />
       </HighlightContainer>
-      <HighlightContainer className="flex mb-10 p-10">
+      <HighlightContainer className="flex mb-10 p-10" containerId="Gallery">
         <Gallery images={project?.images} />
       </HighlightContainer>
       {additionalScrollPanels}
