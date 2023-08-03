@@ -146,4 +146,27 @@ a:hover { color: inherit; }
     padding: 8px;
 }
 
+.arrow-right-link {
+    position: relative;
+}
+
+.arrow-right-link i.fa-arrow-right-from-bracket {
+    position: absolute;
+    top: 6px;
+    left: 100%;
+    transition: left 0.3s ease;
+}
+
+.arrow-right-link:hover h3 {
+    color: #57d9d3;
+    text-decoration: underline;
+}
+
+
+.arrow-right-link:hover i.fa-arrow-right-from-bracket {
+    left: calc(100% + 6px);
+    color: #57d9d3;
+}
+
+
 

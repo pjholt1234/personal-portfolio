@@ -7,9 +7,9 @@ const EventInfoCard = ({ event }) => {
   return (
     <div className="w-full">
       <div className="sm:flex">
-        <a className="flex mr-2" href={`/events/${event.id}`}>
+        <a className="flex arrow-right-link" href={`/events/${event.id}`}>
           <h3>{event?.heading}</h3>
-          <i className="pl-4 fa-solid fa-arrow-right-from-bracket mt-[6px]"></i>
+          <i className="pl-4 fa-solid fa-arrow-right-from-bracket"></i>
         </a>
         <p className="italic font-semibold ml-auto mr-0">{event?.date}</p>
       </div>
