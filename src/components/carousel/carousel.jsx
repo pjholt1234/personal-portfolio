@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect, useContext } from "react";
 import ProjectCard from "./projectCard.jsx";
-import ArrowLeft from "./icons/arrowLeft.jsx";
-import ArrowRight from "./icons/arrowRight.jsx";
-import { CarouselFilterContext } from "../hooks/CarouselFilterContext.jsx";
+import ArrowLeft from "../utility/icons/arrowLeft.jsx";
+import ArrowRight from "../utility/icons/arrowRight.jsx";
+import { CarouselFilterContext } from "../../hooks/CarouselFilterContext.jsx";
 
 const Carousel = () => {
   const maxScrollWidth = useRef();

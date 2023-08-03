@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
-import { CarouselFilterContext } from "../hooks/CarouselFilterContext.jsx";
+import { CarouselFilterContext } from "../../hooks/CarouselFilterContext.jsx";
 
 const ProjectCard = ({
   images = [],

@@ -1,7 +1,7 @@
-import technologies from "../data/technologies";
+import technologies from "../../data/technologies.js";
 import TechnologyBubble from "./technologyBubble.jsx";
 import BubbleRow from "./bubbleRow.jsx";
-import useWindowBreakpoint from "../hooks/useWindowBreakpoint.js";
+import useWindowBreakpoint from "../../hooks/useWindowBreakpoint.js";
 
 const BubbleWrapper = () => {
   const breakpoint = useWindowBreakpoint();

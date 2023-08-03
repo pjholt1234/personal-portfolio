@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import SlideInCard from "./slideInCard.jsx";
+import SlideInCard from "../slideInCard.jsx";
 
 const BubbleRow = ({ children, slideInDirectionRight }) => {
   return (

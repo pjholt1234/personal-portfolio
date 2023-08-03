@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { CarouselFilterContext } from "../hooks/CarouselFilterContext.jsx";
+import { CarouselFilterContext } from "../../hooks/CarouselFilterContext.jsx";
 import { useContext } from "react";
 
 const TechnologyBubble = ({ name, description, logo, bgColor }) => {
