@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import HighlightContainer from "./highlightContainer.jsx";
 import IsometricSquares from "./IsometricSquares.jsx";
 import Gallery from "../gallery.jsx";
-import SplitStringToParagraphs from "../spiltStringToParagraphs.jsx";
+import SplitStringToParagraphs from "../utility/spiltStringToParagraphs.jsx";
 
 const ProjectScrollPanelsWrapper = ({ project }) => {
   const additionalScrollPanels = project?.scrollPanels?.map((panel, index) => {

@@ -5,7 +5,7 @@ const EventInfoCard = ({ event }) => {
   useEffect(() => {}, [event]);
 
   return (
-    <div className="w-full my-5 px-3">
+    <div className="w-full">
       <div className="sm:flex">
         <a className="flex mr-2" href={`/events/${event.id}`}>
           <h3>{event?.heading}</h3>
@@ -13,7 +13,9 @@ const EventInfoCard = ({ event }) => {
         </a>
         <p className="italic font-semibold ml-auto mr-0">{event?.subheading}</p>
       </div>
-      <p>{event?.description}</p>
+      <p className="text-gray-400 hover:text-white min-h-[150px]">
+        {event?.description}
+      </p>
     </div>
   );
 };
