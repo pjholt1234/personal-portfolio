@@ -6,6 +6,8 @@ const projects = [
     title: "Personal Portfolio V2",
     date: "June 2023 - Present",
     bgColor: "bg-green-700",
+    underlineColor: "after:bg-green-700",
+    borderColor: "border-green-700",
     gitHubLink: "https://github.com/pjholt1234/personal-portfolio",
     images: [files.portfolio1, files.portfolio2],
     imgAlignment: null,
@@ -34,6 +36,8 @@ const projects = [
     title: "Steam Market Price Tracker",
     date: "Mar 2023 - May 2023",
     bgColor: "bg-red-700",
+    underlineColor: "after:bg-red-700",
+    borderColor: "border-red-700",
     gitHubLink: "https://github.com/pjholt1234/notion-steam-app",
     images: [files.notionSteamApp],
     imgAlignment: "object-left-top",
@@ -78,6 +82,8 @@ const projects = [
     title: "Personal Portfolio V1",
     date: "Aug 2021 - Sept 2021",
     bgColor: "bg-orange-700",
+    underlineColor: "after:bg-orange-700",
+    borderColor: "border-orange-700",
     gitHubLink: "https://github.com/pjholt1234/personal-portfolio-v1",
     description:
       "My first project out of uni was to create a portfolio site in support of my CV. This site was very basic " +
@@ -92,6 +98,8 @@ const projects = [
     title: "Final Year Dissertation",
     date: "Oct 2020 - April 2021",
     bgColor: "bg-blue-800",
+    underlineColor: "after:bg-blue-800",
+    borderColor: "border-blue-800",
     gitHubLink: "https://github.com/pjholt1234/ExerciseWebCompanion",
     images: [
       files.disLoginPage,
@@ -153,6 +161,8 @@ const projects = [
     title: "Intro to data science",
     date: "Jan 2021 - April 2021",
     bgColor: "bg-purple-800",
+    underlineColor: "after:bg-purple-800",
+    borderColor: "border-purple-800",
     gitHubLink:
       "https://github.com/pjholt1234/RetailRocketNoteBook/blob/main/Group_1.ipynb",
     description:

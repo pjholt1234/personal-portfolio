@@ -52,7 +52,7 @@ const ProjectCard = ({
     if (!gitHubLink) return null;
     return (
       <a className="mr-0 ml-auto" href={gitHubLink}>
-        <i className="text-white text-xl fa-brands fa-github"></i>
+        <i className="text-white text-xl fa-brands fa-github hover:text-highlight-blue"></i>
       </a>
     );
   };

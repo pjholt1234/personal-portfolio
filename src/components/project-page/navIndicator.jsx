@@ -21,7 +21,11 @@ const NavIndicator = ({ title }) => {
   return (
     <div className="flex items-center my-2" onClick={scrollToTargetElement}>
       <span className={`${hrStying} mr-2 cursor-pointer`}></span>
-      <span className={`${titleStyling} cursor-pointer`}>{title}</span>
+      <span
+        className={`${titleStyling} cursor-pointer hover:text-highlight-blue`}
+      >
+        {title}
+      </span>
     </div>
   );
 };

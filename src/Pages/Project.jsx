@@ -7,6 +7,7 @@ import ProjectScrollPanelsWrapper from "../components/project-page/projectScroll
 import ProjectNavWrapper from "../components/project-page/projectNavWrapper.jsx";
 import { VisibleProjectPanelProvider } from "../hooks/VisibleProjectPanelContext.jsx";
 import Gallery from "../components/gallery.jsx";
+import TitleWithUnderline from "../components/utility/titleWithUnderline.jsx";
 
 const Project = () => {
   const { projectId } = useParams();
@@ -35,20 +36,28 @@ const Project = () => {
   return (
     <VisibleProjectPanelProvider navItems={navItems}>
       <div className="md:grid md:grid-cols-2">
-        <div className="h-screen md:sticky top-0 left-0 w-full p-12 items-center h-full flex">
+        <div className="max-h-screen md:sticky top-0 left-0 w-full px-12 items-center h-full flex">
           <div className="w-full">
             <div className="flex items-baseline">
-              <h1>{project?.title}</h1>
+              <TitleWithUnderline
+                text={project?.title}
+                underlineColour={project?.underlineColor}
+              />
               <a className="ml-auto mr-0" href={project?.gitHubLink}>
-                <i className="text-white text-4xl fa-brands fa-github"></i>
+                <i className="text-white text-4xl fa-brands fa-github hover:text-highlight-blue"></i>
               </a>
             </div>
-            <h3 className="italic">{project?.date}</h3>
+            <span className="text-lg italic text-gray-300">
+              {project?.date}
+            </span>
             <ProjectLinks links={project?.links} />
             <div className="hidden md:flex">
               <ProjectNavWrapper navItems={navItems} />
             </div>
-            <Gallery images={project?.images} />
+            <Gallery
+              images={project?.images}
+              borderColor={project?.borderColor}
+            />
           </div>
         </div>
         <ProjectScrollPanelsWrapper project={project} />

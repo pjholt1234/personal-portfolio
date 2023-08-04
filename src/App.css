@@ -168,5 +168,21 @@ a:hover { color: inherit; }
     color: #57d9d3;
 }
 
+.thick-underline::after {
+    transition: all 0.1s ease-in-out;
+    content: "";
+    position: absolute;
+    bottom: 13.5%;
+    z-index: -1;
+    height: 0.2em;
+    width: 104%;
+    left: -1%;
+}
+
+.thick-underline {
+    z-index: 0;
+    position: relative;
+    color: white;
+}
 
 

@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
-const Gallery = ({ images, delay = 5 }) => {
+const Gallery = ({ images, delay = 5, borderColor = null }) => {
   const [imageIndex, setImageIndex] = useState(0);
   const [currentImage, setCurrentImage] = useState(images[imageIndex]);
+
+  const border = borderColor !== null ? `border-8 ${borderColor}` : "";
 
   useEffect(() => {
     if (images.length <= 0) {
@@ -24,7 +26,7 @@ const Gallery = ({ images, delay = 5 }) => {
   }, [imageIndex]);
 
   return (
-    <div className="w-full mt-5">
+    <div className={`w-full rounded-lg ${border}`}>
       {currentImage != null ? (
         <img src={currentImage} alt="Gallery Image" />
       ) : (
@@ -37,6 +39,7 @@ const Gallery = ({ images, delay = 5 }) => {
 Gallery.propTypes = {
   images: PropTypes.array,
   delay: PropTypes.number,
+  borderColor: PropTypes.string,
 };
 
 export default Gallery;

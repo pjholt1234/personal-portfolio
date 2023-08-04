@@ -6,15 +6,14 @@ const ProjectLinks = ({ links }) => {
   }
 
   const renderedLinks = links?.map((link, index) => {
-    const icon = link?.icon;
     return (
       <a
         key={`${link.text}-${index}`}
         href={link.link}
-        className="text-lg flex items-center"
+        className="text-lg flex items-center hover:text-highlight-blue"
       >
-        {icon != null ? <i className={`${icon} w-7`}></i> : ""}
-        {link.text}
+        {link?.icon != null ? <i className={`${link?.icon} w-7`}></i> : ""}
+        <span className="hover:underline">{link.text}</span>
       </a>
     );
   });

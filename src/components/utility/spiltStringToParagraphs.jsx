@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 
-const SplitStringToParagraphs = ({ text = null }) => {
+const SplitStringToParagraphs = ({ className, text = null }) => {
   if (text === null) {
     return;
   }
 
   const paragraphs = text.split("\n").map((paragraph, index) => (
-    <p className="mb-2" key={index}>
+    <p className={`${className} mb-2`} key={index}>
       {paragraph}
     </p>
   ));
@@ -17,5 +17,6 @@ const SplitStringToParagraphs = ({ text = null }) => {
 export default SplitStringToParagraphs;
 
 SplitStringToParagraphs.propTypes = {
+  className: PropTypes.string,
   text: PropTypes.string,
 };
