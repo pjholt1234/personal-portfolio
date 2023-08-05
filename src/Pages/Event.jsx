@@ -3,10 +3,21 @@ import StickyTwoColumnLayout from "../components/utility/stickyTwoColumnLayout.j
 import { useState } from "react";
 import events from "../data/events.js";
 import FeaturedLinks from "../components/utility/featuredLinks.jsx";
+import EventScrollPanelsWrapper from "../components/event-page/eventScrollPanelsWrapper.jsx";
+import NavWrapper from "../components/utility/navWrapper.jsx";
+import { VisiblePanelProvider } from "../hooks/VisiblePanelContext.jsx";
 
 const Event = () => {
   const { eventId } = useParams();
   const [event, setEvent] = useState(events[eventId]);
+
+  let additionalNavItems = [];
+  event?.scrollPanels?.map((panel) => {
+    additionalNavItems.push(panel.title);
+  });
+
+  const navItems = ["Description", ...additionalNavItems];
+
   const leftPanel = () => {
     return (
       <div>
@@ -16,21 +27,24 @@ const Event = () => {
         </div>
         <span className="ml-2 text-lg italic text-gray-300">{event?.date}</span>
         <FeaturedLinks links={event?.links} />
+        <div className="hidden md:flex">
+          <NavWrapper navItems={navItems} />
+        </div>
       </div>
     );
   };
 
   const rightPanel = () => {
-    return (
-      <div>
-        <div className="h-screen">hello</div>
-        <div className="h-screen">hello2</div>
-      </div>
-    );
+    return <EventScrollPanelsWrapper event={event} />;
   };
 
   return (
-    <StickyTwoColumnLayout leftPanel={leftPanel()} rightPanel={rightPanel()} />
+    <VisiblePanelProvider navItems={navItems}>
+      <StickyTwoColumnLayout
+        leftPanel={leftPanel()}
+        rightPanel={rightPanel()}
+      />
+    </VisiblePanelProvider>
   );
 };
 
