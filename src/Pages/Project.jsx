@@ -9,6 +9,7 @@ import { VisibleProjectPanelProvider } from "../hooks/VisibleProjectPanelContext
 import Gallery from "../components/gallery.jsx";
 import TitleWithUnderline from "../components/utility/titleWithUnderline.jsx";
 import IsometricSquares from "../components/project-page/IsometricSquares.jsx";
+import StickyTwoColumnLayout from "../components/utility/stickyTwoColumnLayout.jsx";
 
 const Project = () => {
   const { projectId } = useParams();
@@ -34,34 +35,40 @@ const Project = () => {
 
   const navItems = ["Description", "Gallery", ...additionalNavItems];
 
+  const leftPanel = () => {
+    return (
+      <div className="w-full">
+        <div className="flex items-baseline">
+          <TitleWithUnderline
+            text={project?.title}
+            underlineColour={project?.underlineColor}
+          />
+          <a className="ml-auto mr-0" href={project?.gitHubLink}>
+            <i className="text-white text-4xl fa-brands fa-github hover:text-highlight-blue"></i>
+          </a>
+        </div>
+        <span className="text-lg italic text-gray-300">{project?.date}</span>
+        <ProjectLinks links={project?.links} />
+        <div className="hidden md:flex">
+          <ProjectNavWrapper navItems={navItems} />
+        </div>
+        <div className="h-[300px] w-full flex justify-center">
+          <IsometricSquares technologies={project.technology} />
+        </div>
+      </div>
+    );
+  };
+
+  const rightPanel = () => {
+    return <ProjectScrollPanelsWrapper project={project} />;
+  };
+
   return (
     <VisibleProjectPanelProvider navItems={navItems}>
-      <div className="md:grid md:grid-cols-2">
-        <div className="max-h-screen md:sticky top-0 left-0 w-full px-12 items-center h-full flex">
-          <div className="w-full">
-            <div className="flex items-baseline">
-              <TitleWithUnderline
-                text={project?.title}
-                underlineColour={project?.underlineColor}
-              />
-              <a className="ml-auto mr-0" href={project?.gitHubLink}>
-                <i className="text-white text-4xl fa-brands fa-github hover:text-highlight-blue"></i>
-              </a>
-            </div>
-            <span className="text-lg italic text-gray-300">
-              {project?.date}
-            </span>
-            <ProjectLinks links={project?.links} />
-            <div className="hidden md:flex">
-              <ProjectNavWrapper navItems={navItems} />
-            </div>
-            <div className="h-[300px] w-full flex justify-center">
-              <IsometricSquares technologies={project.technology} />
-            </div>
-          </div>
-        </div>
-        <ProjectScrollPanelsWrapper project={project} />
-      </div>
+      <StickyTwoColumnLayout
+        leftPanel={leftPanel()}
+        rightPanel={rightPanel()}
+      />
     </VisibleProjectPanelProvider>
   );
 };
