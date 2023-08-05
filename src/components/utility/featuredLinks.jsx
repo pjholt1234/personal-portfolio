@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const ProjectLinks = ({ links }) => {
+const FeaturedLinks = ({ links }) => {
   if (!Array.isArray(links) || links.length <= 0) {
     return null;
   }
@@ -23,8 +23,8 @@ const ProjectLinks = ({ links }) => {
   );
 };
 
-export default ProjectLinks;
+export default FeaturedLinks;
 
-ProjectLinks.propTypes = {
+FeaturedLinks.propTypes = {
   links: PropTypes.array,
 };

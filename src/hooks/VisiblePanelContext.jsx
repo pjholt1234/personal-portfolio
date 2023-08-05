@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
-const VisibleProjectPanelContext = createContext("");
-const VisibleProjectPanelProvider = ({ children, navItems }) => {
-  const [activePanels, setActivePanels] = useState(initActivePanels(navItems));
+const VisiblePanelContext = createContext("");
+const VisiblePanelProvider = ({ children, navItems }) => {
+  const [activePanels, setActivePanels] = useState(initPanels(navItems));
 
   const updateActivePanels = (panelId) => {
     setActivePanels((prevActivePanels) => ({
@@ -12,20 +12,18 @@ const VisibleProjectPanelProvider = ({ children, navItems }) => {
   };
 
   return (
-    <VisibleProjectPanelContext.Provider
-      value={{ activePanels, updateActivePanels }}
-    >
+    <VisiblePanelContext.Provider value={{ activePanels, updateActivePanels }}>
       {children}
-    </VisibleProjectPanelContext.Provider>
+    </VisiblePanelContext.Provider>
   );
 };
 
-VisibleProjectPanelProvider.propTypes = {
+VisiblePanelProvider.propTypes = {
   children: PropTypes.node,
   navItems: PropTypes.array,
 };
 
-const initActivePanels = (navItems) => {
+const initPanels = (navItems) => {
   let activePanels = {};
   for (const item of navItems) {
     activePanels[item] = false;
@@ -33,4 +31,4 @@ const initActivePanels = (navItems) => {
   return activePanels;
 };
 
-export { VisibleProjectPanelContext, VisibleProjectPanelProvider };
+export { VisiblePanelContext, VisiblePanelProvider };
