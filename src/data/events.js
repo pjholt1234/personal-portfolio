@@ -41,7 +41,7 @@ const events = {
       },
     ],
   },
-  work: {
+  lightflows: {
     id: "lightflows",
     heading: "Lightflows",
     date: "Oct 2021 - Present",

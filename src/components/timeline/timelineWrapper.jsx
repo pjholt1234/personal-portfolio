@@ -10,7 +10,7 @@ const TimelineWrapper = () => {
       <TimelineRow colCount={colCount}>
         <EventLine
           bgColor="bg-red-500"
-          id="work"
+          id="lightflows"
           colStart={4}
           colSpan={3}
           icon="fa-solid fa-briefcase"
