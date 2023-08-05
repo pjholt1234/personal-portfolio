@@ -8,6 +8,7 @@ import ProjectNavWrapper from "../components/project-page/projectNavWrapper.jsx"
 import { VisibleProjectPanelProvider } from "../hooks/VisibleProjectPanelContext.jsx";
 import Gallery from "../components/gallery.jsx";
 import TitleWithUnderline from "../components/utility/titleWithUnderline.jsx";
+import IsometricSquares from "../components/project-page/IsometricSquares.jsx";
 
 const Project = () => {
   const { projectId } = useParams();
@@ -31,7 +32,7 @@ const Project = () => {
     additionalNavItems.push(panel.title);
   });
 
-  const navItems = ["Description", "Tech Stack", ...additionalNavItems];
+  const navItems = ["Description", "Gallery", ...additionalNavItems];
 
   return (
     <VisibleProjectPanelProvider navItems={navItems}>
@@ -54,10 +55,9 @@ const Project = () => {
             <div className="hidden md:flex">
               <ProjectNavWrapper navItems={navItems} />
             </div>
-            <Gallery
-              images={project?.images}
-              borderColor={project?.borderColor}
-            />
+            <div className="h-[300px] w-full flex justify-center">
+              <IsometricSquares technologies={project.technology} />
+            </div>
           </div>
         </div>
         <ProjectScrollPanelsWrapper project={project} />

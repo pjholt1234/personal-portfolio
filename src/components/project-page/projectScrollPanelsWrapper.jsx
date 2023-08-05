@@ -3,6 +3,7 @@ import HighlightContainer from "./highlightContainer.jsx";
 import IsometricSquares from "./IsometricSquares.jsx";
 import SplitStringToParagraphs from "../utility/spiltStringToParagraphs.jsx";
 import TitleWithUnderline from "../utility/titleWithUnderline.jsx";
+import Gallery from "../gallery.jsx";
 
 const ProjectScrollPanelsWrapper = ({ project }) => {
   const additionalScrollPanels = project?.scrollPanels?.map((panel, index) => {
@@ -30,15 +31,13 @@ const ProjectScrollPanelsWrapper = ({ project }) => {
           {project?.longDescription ?? project?.description}
         </p>
       </HighlightContainer>
-      <HighlightContainer className="w-full p-4" containerId="Tech Stack">
+      <HighlightContainer className="w-full p-4" containerId="Gallery">
         <TitleWithUnderline
-          text="Tech Stack"
+          text="Gallery"
           underlineColour={project?.underlineColor}
           tag="h2"
         />
-        <div className="h-[300px] w-full flex justify-center">
-          <IsometricSquares technologies={project.technology} />
-        </div>
+        <Gallery images={project?.images} borderColor={project?.borderColor} />
       </HighlightContainer>
       {additionalScrollPanels}
     </div>
