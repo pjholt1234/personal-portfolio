@@ -13,8 +13,31 @@ const events = {
     links: [
       {
         link: files.reportCard,
-        text: "Report",
+        text: "Final year report",
         icon: "fa-solid fa-book",
+      },
+    ],
+    scrollPanels: [
+      {
+        title: "Modules Taken",
+        type: "list",
+        items: [
+          "Foundation of business analytics",
+          "Ethical and professional issues in computing and digital media",
+          "Software development project",
+          "Sustainable business and computing",
+          "Requirements engineering",
+          "Business intelligence and data mining",
+          "Security management in practice",
+          "Information practitioner 2",
+          "Project management",
+          "Data, schemas and applications",
+          "Business Applications",
+          "Information Technology",
+          "Understanding the Principles of Marketing",
+          "Understanding Organisations and People",
+          "Introduction to OO Systems Development",
+        ],
       },
     ],
   },
