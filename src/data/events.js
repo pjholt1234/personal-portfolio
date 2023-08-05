@@ -1,3 +1,5 @@
+import * as files from "../assets/index.js";
+
 const events = {
   uni: {
     id: "uni",
@@ -8,6 +10,13 @@ const events = {
       "I graduated from UWE in the summer of 2021 with a first-class degree in business computing. Throughout the program, I covered many topics around software development. These included project management, core programming skills, web development and software development methodologies.",
     color: "bg-blue-800",
     icon: "fa-solid fa-graduation-cap",
+    links: [
+      {
+        link: files.reportCard,
+        text: "Report",
+        icon: "fa-solid fa-book",
+      },
+    ],
   },
   work: {
     id: "lightflows",

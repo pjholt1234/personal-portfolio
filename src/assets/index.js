@@ -23,8 +23,7 @@ import about2 from "./portfolio-v1/about2.png";
 import contact from "./portfolio-v1/contact.png";
 import projectExample from "./portfolio-v1/projectExample.png";
 
-//data science
-
+//Data science
 import aproiri from "./machine-learning/aproiri.png";
 import aproiriEvaluation from "./machine-learning/aproirievaluation.png";
 import corrMatrix from "./machine-learning/corrMatrix.png";
@@ -32,6 +31,9 @@ import customerBehaviour from "./machine-learning/customerbehaviour.png";
 import firstRecommender from "./machine-learning/firstrecommender.png";
 import hybrid from "./machine-learning/hybrid.png";
 import hybridEvaluation from "./machine-learning/hybridevaluation.png";
+
+//Additional files
+import reportCard from "./files/Results.pdf";
 
 export {
   disLoginPage,
@@ -58,4 +60,5 @@ export {
   firstRecommender,
   hybrid,
   hybridEvaluation,
+  reportCard,
 };
