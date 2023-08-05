@@ -15,7 +15,7 @@ const HighlightContainer = ({ children, className, containerId }) => {
     <div className="min-h-screen flex items-center" id={containerId}>
       <InView
         as="div"
-        className={`rounded-xl hover:bg-blue-200 hover:bg-opacity-10 hover:shadow-lg ${className}`}
+        className={`rounded-xl hover:bg-blue-200 hover:bg-opacity-10 hover:shadow-lg w-full ${className}`}
         onChange={(inView) => setVisible(inView)}
       >
         {children}
