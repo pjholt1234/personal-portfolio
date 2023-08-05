@@ -23,7 +23,7 @@ const Index = () => {
         </SlideInCard>
       </Container>
       <CarouselWrapper />
-      <SlideInCard className="md:hidden mt-[75px]" triggerOnce={true}>
+      <SlideInCard className="block md:hidden mt-[75px]" triggerOnce={true}>
         <MobileProjectList />
       </SlideInCard>
     </div>

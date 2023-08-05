@@ -4,9 +4,12 @@ const MobileProjectList = () => {
   const projectLinks = projects.map((project, index) => {
     return (
       <li key={index}>
-        <a href={`/projects/${project.id}`} className="grid grid-cols-2 mb-1">
+        <a
+          href={`/projects/${project.id}`}
+          className="grid grid-cols-1 md:grid-cols-2 mb-1"
+        >
           <span className="font-bold">{project.title}</span>
-          <span className="mr-0 ml-auto">{project.date}</span>
+          <span className="md:mr-0 md:ml-auto">{project.date}</span>
         </a>
       </li>
     );
