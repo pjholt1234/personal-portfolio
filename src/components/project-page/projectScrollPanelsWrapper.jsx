@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import HighlightContainer from "./highlightContainer.jsx";
+import HighlightContainer from "../utility/highlightContainer.jsx";
 import IsometricSquares from "./IsometricSquares.jsx";
 import SplitStringToParagraphs from "../utility/spiltStringToParagraphs.jsx";
 import TitleWithUnderline from "../utility/titleWithUnderline.jsx";

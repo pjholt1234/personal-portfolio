@@ -2,10 +2,10 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import projects from "../data/projects.js";
 import PageNotFound from "../components/pageNotFound.jsx";
-import ProjectLinks from "../components/project-page/projectLinks.jsx";
+import FeaturedLinks from "../components/utility/featuredLinks.jsx";
 import ProjectScrollPanelsWrapper from "../components/project-page/projectScrollPanelsWrapper.jsx";
-import ProjectNavWrapper from "../components/project-page/projectNavWrapper.jsx";
-import { VisibleProjectPanelProvider } from "../hooks/VisibleProjectPanelContext.jsx";
+import NavWrapper from "../components/utility/navWrapper.jsx";
+import { VisiblePanelProvider } from "../hooks/VisiblePanelContext.jsx";
 import Gallery from "../components/gallery.jsx";
 import TitleWithUnderline from "../components/utility/titleWithUnderline.jsx";
 import IsometricSquares from "../components/project-page/IsometricSquares.jsx";
@@ -48,9 +48,9 @@ const Project = () => {
           </a>
         </div>
         <span className="text-lg italic text-gray-300">{project?.date}</span>
-        <ProjectLinks links={project?.links} />
+        <FeaturedLinks links={project?.links} />
         <div className="hidden md:flex">
-          <ProjectNavWrapper navItems={navItems} />
+          <NavWrapper navItems={navItems} />
         </div>
         <div className="h-[300px] w-full flex justify-center">
           <IsometricSquares technologies={project.technology} />
@@ -64,12 +64,12 @@ const Project = () => {
   };
 
   return (
-    <VisibleProjectPanelProvider navItems={navItems}>
+    <VisiblePanelProvider navItems={navItems}>
       <StickyTwoColumnLayout
         leftPanel={leftPanel()}
         rightPanel={rightPanel()}
       />
-    </VisibleProjectPanelProvider>
+    </VisiblePanelProvider>
   );
 };
 

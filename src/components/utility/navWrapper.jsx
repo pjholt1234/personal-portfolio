@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import NavIndicator from "./navIndicator.jsx";
 
-const ProjectNavWrapper = ({ navItems }) => {
+const NavWrapper = ({ navItems }) => {
   const renderedNavItems = navItems?.map((item) => {
     return <NavIndicator title={item} key={item} />;
   });
@@ -9,8 +9,8 @@ const ProjectNavWrapper = ({ navItems }) => {
   return <div className="my-10">{renderedNavItems}</div>;
 };
 
-export default ProjectNavWrapper;
+export default NavWrapper;
 
-ProjectNavWrapper.propTypes = {
+NavWrapper.propTypes = {
   navItems: PropTypes.array,
 };

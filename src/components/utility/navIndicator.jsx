@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { useContext, useEffect } from "react";
-import { VisibleProjectPanelContext } from "../../hooks/VisibleProjectPanelContext.jsx";
+import { VisiblePanelContext } from "../../hooks/VisiblePanelContext.jsx";
 
 const NavIndicator = ({ title }) => {
-  const { activePanels } = useContext(VisibleProjectPanelContext);
+  const { activePanels } = useContext(VisiblePanelContext);
   const scrollToTargetElement = () => {
     document.getElementById(title).scrollIntoView({ behavior: "smooth" });
   };

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { useContext, useEffect, useState } from "react";
-import { VisibleProjectPanelContext } from "../../hooks/VisibleProjectPanelContext.jsx";
+import { VisiblePanelContext } from "../../hooks/VisiblePanelContext.jsx";
 import { InView } from "react-intersection-observer";
 
 const HighlightContainer = ({ children, className, containerId }) => {
-  const { updateActivePanels } = useContext(VisibleProjectPanelContext);
+  const { updateActivePanels } = useContext(VisiblePanelContext);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
