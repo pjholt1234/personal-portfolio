@@ -12,7 +12,7 @@ const PillWrapper = ({ pills }) => {
       />
     );
   });
-  return <div className="flex space-x-2">{renderedPills}</div>;
+  return <div className="flex space-x-2 text-sm">{renderedPills}</div>;
 };
 
 export default PillWrapper;
