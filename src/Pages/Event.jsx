@@ -20,12 +20,17 @@ const Event = () => {
 
   const leftPanel = () => {
     return (
-      <div>
+      <div className="w-full">
         <div className="flex flex-wrap items-baseline">
           <i className={`mr-2 text-white text-4xl ${event?.icon}`}></i>
           <h1>{event?.heading}</h1>
         </div>
-        <span className="ml-2 text-lg italic text-gray-300">{event?.date}</span>
+        <div className="md:flex">
+          <div className="text-lg italic text-gray-300 mr-2">{event?.date}</div>
+          <div className="md:ml-auto md:mr-0 text-lg text-gray-300">
+            {event?.subheading}
+          </div>
+        </div>
         <FeaturedLinks links={event?.links} />
         <div className="hidden md:flex">
           <NavWrapper navItems={navItems} />

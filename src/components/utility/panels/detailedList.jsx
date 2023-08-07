@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import SpiltStringToParagraphs from "../spiltStringToParagraphs.jsx";
+import PillWrapper from "../pillWrapper.jsx";
 
 const DetailedList = ({ panel }) => {
   const renderedItems = panel?.items?.map((item, index) => {
@@ -20,6 +21,7 @@ const DetailedList = ({ panel }) => {
           className="text-sm text-gray-300"
           text={item?.text}
         />
+        <PillWrapper pills={item?.pills} />
       </div>
     );
   });
