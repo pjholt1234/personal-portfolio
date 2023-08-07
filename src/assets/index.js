@@ -34,6 +34,7 @@ import hybridEvaluation from "./machine-learning/hybridevaluation.png";
 
 //Additional files
 import reportCard from "./files/Results.pdf";
+import graduation from "./graduation.png";
 
 export {
   disLoginPage,
@@ -61,4 +62,5 @@ export {
   hybrid,
   hybridEvaluation,
   reportCard,
+  graduation,
 };
