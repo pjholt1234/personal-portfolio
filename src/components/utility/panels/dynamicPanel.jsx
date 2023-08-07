@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import List from "./list.jsx";
 import SplitStringToParagraphs from "../spiltStringToParagraphs.jsx";
+import DetailedList from "./detailedList.jsx";
+import ImagePanel from "./imagePanel.jsx";
 
 const DynamicPanel = ({ panel }) => {
   switch (panel?.type) {
@@ -10,6 +12,10 @@ const DynamicPanel = ({ panel }) => {
       );
     case "list":
       return <List panel={panel} />;
+    case "detailed-list":
+      return <DetailedList panel={panel} />;
+    case "img":
+      return <ImagePanel panel={panel} />;
     default:
       return null;
   }
