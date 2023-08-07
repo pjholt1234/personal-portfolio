@@ -8,7 +8,7 @@ const List = ({ panel, ordered = false }) => {
   });
 
   return (
-    <ListTag className={ordered ? "list-decimal" : "list-disc"}>
+    <ListTag className={`${ordered ? "list-decimal" : "list-disc"} p-2`}>
       {renderedListItems}
     </ListTag>
   );
