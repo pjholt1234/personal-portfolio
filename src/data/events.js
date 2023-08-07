@@ -59,6 +59,7 @@ const events = {
               "the command line and built in Java. This project was my first exposure to OOP. Part of the marks were " +
               "for designing the project using UML and the rest were for delivering a final application which implement " +
               "polymorphism and inheritance.",
+            pills: [{ text: "Java" }],
           },
           {
             heading: "Twin Cities web application",
@@ -68,6 +69,14 @@ const events = {
               "application. I use PHP, Javascript, HTML, CSS and MySQL to deliver a website which used the Google Maps " +
               "API to show points of interest in two twin cities. The project also made use of the Flickr image API to" +
               " pull in images relating to the points of interest.",
+            pills: [
+              { text: "PHP" },
+              { text: "Javascript" },
+              { text: "MySQL" },
+              { text: "CSS" },
+              { text: "Google Maps API" },
+              { text: "Flickr API" },
+            ],
           },
           {
             heading: "UWE Support revamp",
@@ -76,6 +85,7 @@ const events = {
               "deliverables. Our client was the universities head of IT and our task was to help identify and fix " +
               "problematic areas of the UWE support website. This culminated in creating a mock of our proposed fixes" +
               " and a presentation of our findings.",
+            pills: [{ text: "PHP" }, { text: "Javascript" }, { text: "CSS" }],
           },
           {
             heading: "Introduction to data science",
@@ -84,6 +94,14 @@ const events = {
               "This group project was an introduction to data science. Within this module I was fortunate to be given the " +
               "chance to learn about machine learning and data mining which culminated in this final project where we had to " +
               "build a store item recommender based on the retail rocket dataset.",
+            pills: [
+              { text: "Python" },
+              { text: "Pandas" },
+              { text: "sklearn" },
+              { text: "Matplot" },
+              { text: "mlxtend" },
+              { text: "LightFM" },
+            ],
           },
           {
             heading: "Exercise web companion (Final year project)",
@@ -93,6 +111,14 @@ const events = {
               "I achieved this primarily with, MySql, PHP, and Javascript. It was the first of many things for me and I learnt " +
               "a great deal surrounding web development and broader application development. Key takeaways from this project " +
               "were, planning and design methods such as UML + agile, database design, and fundamentals of how the web works.",
+            pills: [
+              { text: "PHP" },
+              { text: "Javascript" },
+              { text: "JQuery" },
+              { text: "MySQL" },
+              { text: "CSS" },
+              { text: "Youtube API" },
+            ],
           },
         ],
       },
