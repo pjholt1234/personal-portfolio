@@ -10,6 +10,16 @@ const Pill = ({ className = null, text, link = null }) => {
       </span>
     );
   }
+
+  return (
+    <a href={link}>
+      <span
+        className={`${className} rounded p-1 bg-highlight-blue text-gray-700`}
+      >
+        {text}
+      </span>
+    </a>
+  );
 };
 
 export default Pill;
