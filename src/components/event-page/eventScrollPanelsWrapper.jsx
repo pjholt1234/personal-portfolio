@@ -6,7 +6,7 @@ const EventScrollPanelsWrapper = ({ event }) => {
   const additionalScrollPanels = event?.scrollPanels?.map((panel, index) => {
     return (
       <HighlightContainer className="p-4" key={index} containerId={panel.title}>
-        <h2>{panel?.title}</h2>
+        {panel?.hideTitle ? "" : <h2>{panel?.title}</h2>}
         <DynamicPanel panel={panel} />
       </HighlightContainer>
     );
