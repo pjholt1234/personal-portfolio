@@ -3,20 +3,18 @@ import StickyTwoColumnLayout from "../components/utility/stickyTwoColumnLayout.j
 import { useState } from "react";
 import events from "../data/events.js";
 import FeaturedLinks from "../components/utility/featuredLinks.jsx";
-import EventScrollPanelsWrapper from "../components/event-page/eventScrollPanelsWrapper.jsx";
 import NavWrapper from "../components/utility/navWrapper.jsx";
 import { VisiblePanelProvider } from "../hooks/VisiblePanelContext.jsx";
+import ScrollPanelsWrapper from "../components/utility/panels/scrollPanelsWrapper.jsx";
 
 const Event = () => {
   const { eventId } = useParams();
   const [event, setEvent] = useState(events[eventId]);
 
-  let additionalNavItems = [];
+  let navItems = [];
   event?.scrollPanels?.map((panel) => {
-    additionalNavItems.push(panel.title);
+    navItems.push(panel.title);
   });
-
-  const navItems = ["Description", ...additionalNavItems];
 
   const leftPanel = () => {
     return (
@@ -40,7 +38,12 @@ const Event = () => {
   };
 
   const rightPanel = () => {
-    return <EventScrollPanelsWrapper event={event} />;
+    return (
+      <ScrollPanelsWrapper
+        scrollPanels={event?.scrollPanels}
+        underlineColor={event?.underlineColor}
+      />
+    );
   };
 
   return (

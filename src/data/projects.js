@@ -15,13 +15,23 @@ const projects = [
     description:
       "I saw the use of the intersection observer online for some interesting css animations tied into the page scroll. " +
       "This inspired me to refresh my personal portfolio site. I took this opportunity to brush up on my React knowledge too.",
-    longDescription:
-      "After being inspired by a brochure site with interesting animations based on the user's scroll, " +
-      "I wanted to experiment with this idea in my free time. This combined with the realisation that my previous " +
-      "portfolio was not a good demonstration of what I have learned in the last year. This resulted in the genesis of " +
-      "starting this portfolio revamp. I thought it was a good opportunity to work on a pure frontend project allowing " +
-      "me to explore the aforementioned animations as well as build on my React experience. ",
     scrollPanels: [
+      {
+        title: "Description",
+        type: "text",
+        text:
+          "After being inspired by a brochure site with interesting animations based on the user's scroll, " +
+          "I wanted to experiment with this idea in my free time. This combined with the realisation that my previous " +
+          "portfolio was not a good demonstration of what I have learned in the last year. This resulted in the genesis of " +
+          "starting this portfolio revamp. I thought it was a good opportunity to work on a pure frontend project allowing " +
+          "me to explore the aforementioned animations as well as build on my React experience. ",
+      },
+      {
+        title: "Gallery",
+        hideTitle: true,
+        type: "gallery",
+        images: [files.portfolio1, files.portfolio2],
+      },
       {
         title: "Reflections",
         type: "text",
@@ -58,13 +68,21 @@ const projects = [
       "This project provides an interface for entering steam item purchases and sales and calculates profit based on " +
       "item price data. Additionally, it allows you to export to a notion table. The aim of the project was to practice " +
       "using Laravel Livewire and the TALL stack.",
-    longDescription:
-      "In late 2022, Lightflows began experimenting with the TALL stack (Tailwind, AlpineJS, Laravel, " +
-      "Livewire). To supplement what I was doing at work I thought I should start a project using the same technology. " +
-      "The premise of this was to track steam item prices, calculate profits, and post these to a desired Notion page. " +
-      "Alongside learning the tall stack I had been getting to grips with a number of OOP design patterns I wanted to " +
-      "really over-engineer my project to try and put what I learnt into practice.",
     scrollPanels: [
+      {
+        title: "Description",
+        type: "text",
+        text:
+          "This project provides an interface for entering steam item purchases and sales and calculates profit based on " +
+          "item price data. Additionally, it allows you to export to a notion table. The aim of the project was to practice " +
+          "using Laravel Livewire and the TALL stack.",
+      },
+      {
+        title: "Gallery",
+        hideTitle: true,
+        type: "gallery",
+        images: [files.notionSteamApp],
+      },
       {
         title: "Reflections",
         type: "text",
@@ -101,6 +119,28 @@ const projects = [
       "so I took this opportunity to explore Bootstrap and styling in general.",
     technology: ["Javascript", "CSS"],
     imgAlignment: "object-left-top",
+    scrollPanels: [
+      {
+        title: "Description",
+        type: "text",
+        text:
+          "My first project out of uni was to create a portfolio site in support of my CV. This site was very basic " +
+          "with simple html CSS and a little javascript. For most of my projects in uni I didn’t have the time to learn CSS " +
+          "so I took this opportunity to explore Bootstrap and styling in general.",
+      },
+      {
+        title: "Gallery",
+        hideTitle: true,
+        type: "gallery",
+        images: [
+          files.about,
+          files.about2,
+          files.contact,
+          files.homepage,
+          files.projectExample,
+        ],
+      },
+    ],
   },
   {
     id: "dissertation",
@@ -125,11 +165,6 @@ const projects = [
     description:
       "My final year dissertation was my first large-scale web application. My idea for the project was to create a tool " +
       "for planning, scheduling and tracking workouts.",
-    longDescription:
-      "For my final year dissertation, I built a web application for planning, scheduling and recording exercise plans. " +
-      "I achieved this primarily with, MySql, PHP, and Javascript. It was the first of many things for me and I learnt " +
-      "a great deal surrounding web development and broader application development. Key takeaways from this project " +
-      "were, planning and design methods such as UML + agile, database design, and fundamentals of how the web works.",
     links: [
       {
         link: "https://www.youtube.com/watch?v=DuZjvRmZTzM",
@@ -143,6 +178,30 @@ const projects = [
       },
     ],
     scrollPanels: [
+      {
+        title: "Description",
+        type: "text",
+        text:
+          "For my final year dissertation, I built a web application for planning, scheduling and recording exercise plans. " +
+          "I achieved this primarily with, MySql, PHP, and Javascript. It was the first of many things for me and I learnt " +
+          "a great deal surrounding web development and broader application development. Key takeaways from this project " +
+          "were, planning and design methods such as UML + agile, database design, and fundamentals of how the web works.",
+      },
+      {
+        title: "Gallery",
+        hideTitle: true,
+        type: "gallery",
+        images: [
+          files.disLoginPage,
+          files.disPlanning1,
+          files.disPlanning2,
+          files.disPlanning3,
+          files.disProfile1,
+          files.disProfile2,
+          files.disProfile3,
+          files.disTricks,
+        ],
+      },
       {
         title: "Reflections",
         type: "text",
@@ -192,6 +251,30 @@ const projects = [
         link: "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset",
         text: "Retail rocket dataset",
         icon: "fa-solid fa-file",
+      },
+    ],
+    scrollPanels: [
+      {
+        title: "Description",
+        type: "text",
+        text:
+          "This group project was an introduction to data science. Within this module I was fortunate to be given the " +
+          "chance to learn about machine learning and data mining which culminated in this final project where we had to " +
+          "build a store item recommender based on the retail rocket dataset.",
+      },
+      {
+        title: "Gallery",
+        hideTitle: true,
+        type: "gallery",
+        images: [
+          files.aproiri,
+          files.aproiriEvaluation,
+          files.corrMatrix,
+          files.customerBehaviour,
+          files.firstRecommender,
+          files.hybrid,
+          files.hybridEvaluation,
+        ],
       },
     ],
   },

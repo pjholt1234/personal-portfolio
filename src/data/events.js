@@ -7,8 +7,11 @@ const events = {
     date: "Sept 2018 - June 2021",
     subheading: "First Class, Bcs Business Computing",
     description:
-      "I graduated from UWE in the summer of 2021 with a first-class degree in business computing. Throughout the program, I covered many topics around software development. These included project management, core programming skills, web development and software development methodologies.",
+      "I graduated from UWE in the summer of 2021 with a first-class degree in business computing. Throughout the program, " +
+      "I covered many topics around software development. These included project management, core programming skills," +
+      " web development and software development methodologies.",
     color: "bg-blue-800",
+    underlineColor: "after:bg-blue-800",
     icon: "fa-solid fa-graduation-cap",
     links: [
       {
@@ -18,6 +21,14 @@ const events = {
       },
     ],
     scrollPanels: [
+      {
+        title: "Description",
+        type: "text",
+        text:
+          "I graduated from UWE in the summer of 2021 with a first-class degree in business computing. Throughout " +
+          "the program, I covered many topics around software development. These included project management, core " +
+          "programming skills, web development and software development methodologies.",
+      },
       {
         title: "Modules Taken",
         type: "list",
@@ -158,13 +169,17 @@ const events = {
       " many exciting projects as well as learn new technologies such as Laravel, Livewire, React, Drupal, WordPress " +
       "and even some Unity. I have contributed to project ranging from brochure sites to a fully automatic video rendering " +
       "platform.",
-    longDescription:
-      "During my time at Lightflows, I have had the chance to work on a wide variety of projects and " +
-      "technologies. The agency has provided a great environment for learning and developing myself in the early years " +
-      "of my career. In a single month, I could be working on a full stack node or Laravel application, designing a " +
-      "piece of middleware to integrate two external client systems or building a slick brochure site for their wide " +
-      "client base",
     scrollPanels: [
+      {
+        title: "Description",
+        type: "text",
+        text:
+          "During my time at Lightflows, I have had the chance to work on a wide variety of projects and " +
+          "technologies. The agency has provided a great environment for learning and developing myself in the early years " +
+          "of my career. In a single month, I could be working on a full stack node or Laravel application, designing a " +
+          "piece of middleware to integrate two external client systems or building a slick brochure site for their wide " +
+          "client base",
+      },
       {
         title: "My role",
         type: "text",
@@ -349,6 +364,7 @@ const events = {
       },
     ],
     color: "bg-red-700",
+    underlineColor: "after:bg-red-500",
     icon: "fa-sharp fa-solid fa-briefcase",
   },
 };

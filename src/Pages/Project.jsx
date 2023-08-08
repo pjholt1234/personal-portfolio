@@ -3,10 +3,9 @@ import { useEffect, useState } from "react";
 import projects from "../data/projects.js";
 import PageNotFound from "../components/pageNotFound.jsx";
 import FeaturedLinks from "../components/utility/featuredLinks.jsx";
-import ProjectScrollPanelsWrapper from "../components/project-page/projectScrollPanelsWrapper.jsx";
+import ScrollPanelsWrapper from "../components/utility/panels/scrollPanelsWrapper.jsx";
 import NavWrapper from "../components/utility/navWrapper.jsx";
 import { VisiblePanelProvider } from "../hooks/VisiblePanelContext.jsx";
-import Gallery from "../components/gallery.jsx";
 import TitleWithUnderline from "../components/utility/titleWithUnderline.jsx";
 import IsometricSquares from "../components/project-page/IsometricSquares.jsx";
 import StickyTwoColumnLayout from "../components/utility/stickyTwoColumnLayout.jsx";
@@ -28,12 +27,10 @@ const Project = () => {
     return <PageNotFound />;
   }
 
-  let additionalNavItems = [];
+  let navItems = [];
   project?.scrollPanels?.map((panel) => {
-    additionalNavItems.push(panel.title);
+    navItems.push(panel.title);
   });
-
-  const navItems = ["Description", "Gallery", ...additionalNavItems];
 
   const leftPanel = () => {
     return (
@@ -60,7 +57,12 @@ const Project = () => {
   };
 
   const rightPanel = () => {
-    return <ProjectScrollPanelsWrapper project={project} />;
+    return (
+      <ScrollPanelsWrapper
+        scrollPanels={project?.scrollPanels}
+        underlineColor={project?.underlineColor}
+      />
+    );
   };
 
   return (
