@@ -21,10 +21,10 @@ const technologies = [
   {
     name: "Laravel",
     description:
-      "Laravel is my absolute favorite framework/ecosystem I have worked with thus far. It makes " +
-      "creating an MVC-based application a breeze. I have built most of my projects in Laravel, professionally " +
-      "and personally, creating projects such as full project management systems using the TALL stack to interactive " +
-      "online learning games with the support of webhooks.",
+      "Laravel is my absolute favorite framework I have worked with thus far. It makes creating an MVC-based application" +
+      " a breeze. I have built most of my projects in Laravel, professionally and personally, creating projects such" +
+      " as full project management systems using the TALL stack to interactive online learning games with the support " +
+      "of webhooks.",
     logo: "fa-brands fa-laravel",
     bgColor: "bg-red-500",
   },
@@ -41,19 +41,19 @@ const technologies = [
   {
     name: "CSS",
     description:
-      "Since I primarily work in the Laravel ecosystem, most of my CSS is done using Tailwind. " +
-      "It provides a comprehensive set of ready-to-use utility classes, allowing developers to quickly style and " +
-      "structure their web pages without the need for writing custom CSS from scratch.",
+      "In the last year, most of my CSS is done using Tailwind. It provides a comprehensive set of ready-to-use utility " +
+      "classes, allowing developers to quickly style and structure their web pages without the need for writing custom " +
+      "CSS from scratch. However sometimes it is necessary to write custom CSS, and I have experience with both Sass and " +
+      "vanilla CSS.",
     logo: "fa-brands fa-css3-alt",
     bgColor: "bg-pink-500",
   },
   {
-    name: "Unity",
+    name: "MySQL",
     description:
-      "A surprising but welcome opportunity came around within my professional career to create an " +
-      "application using Unity. I saw this as a perfect chance to learn a more low-level language in the form of " +
-      "C#, as well as branch out into the field of game design.",
-    logo: "fa-brands fa-unity",
+      "MySQL is the database of choice for most of my projects. Often I am interacting with MySQL through an ORM such as" +
+      "Eloquent, however sometimes It's required to get into the nitty-gritty of SQL to get the job done.",
+    logo: "fa-solid fa-database",
     bgColor: "bg-black",
   },
 ];
