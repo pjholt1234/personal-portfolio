@@ -19,7 +19,7 @@ const Event = () => {
   const leftPanel = () => {
     return (
       <div className="w-full">
-        <div className="flex flex-wrap items-baseline">
+        <div className="flex flex-wrap items-baseline mt-4">
           <i className={`mr-2 text-white text-4xl ${event?.icon}`}></i>
           <h1>{event?.heading}</h1>
         </div>
