@@ -14,6 +14,9 @@ const Title = () => {
           <a className="mx-1" href="https://github.com/pjholt1234">
             <i className="text-white text-4xl fa-brands fa-github"></i>
           </a>
+          <a className="mx-1" href="mailto:pjholt1234@gmail.com">
+            <i className="text-white text-4xl fa-solid fa-envelope"></i>
+          </a>
         </div>
       </div>
       <div className="flex justify-center h-screen items-center">
