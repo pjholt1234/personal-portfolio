@@ -2,9 +2,46 @@ import * as files from "../assets/index.js";
 
 const projects = [
   {
+    id: "room-planner-app",
+    title: "Room planner WIP",
+    date: "Aug 2023 - Present",
+    bgColor: "bg-pink-700",
+    underlineColor: "after:bg-pink-700",
+    borderColor: "border-pink-700",
+    gitHubLink: "https://github.com/pjholt1234/room-planner",
+    images: [files.roomPlanner, files.roomPlannerDesign],
+    imgAlignment: null,
+    technology: ["MongoDB", "Typescript", "React", "CSS"],
+    description:
+      "I decided to combine both learning typescript, html canvas and its supporting JS API and MongoDB. " +
+      "The project was designed to be a room planner, heavily inspired by canva",
+    scrollPanels: [
+      {
+        title: "Description",
+        type: "text",
+        text:
+          "After completing my personal portfolio, I wanted to continue broadening my knowledge of the Javascript ecosystem. " +
+          "I decided to building this project using typescript for both the front and backend. I used the both create and the plain " +
+          "html canvas for the UI. My goal of this project was to try to scratch build as much as possible and limit my use of packages." +
+          "This was to ensure that I had a good understanding of the underlying technologies.",
+      },
+      {
+        title: "Gallery",
+        hideTitle: true,
+        type: "gallery",
+        images: [files.roomPlanner, files.roomPlannerDesign],
+      },
+      {
+        title: "Reflections",
+        type: "text",
+        text: "Todo...",
+      },
+    ],
+  },
+  {
     id: "personal-portfolio-v2",
     title: "Personal Portfolio V2",
-    date: "June 2023 - Present",
+    date: "June 2023 - Aug 2023",
     bgColor: "bg-green-700",
     underlineColor: "after:bg-green-700",
     borderColor: "border-green-700",
