@@ -36,6 +36,10 @@ import hybridEvaluation from "./machine-learning/hybridevaluation.png";
 import reportCard from "./files/Results.pdf";
 import graduation from "./graduation.png";
 
+//Room planner
+import roomPlanner from "./room-planner/room-planner-wip.png";
+import roomPlannerDesign from "./room-planner/room-planner-design.png";
+
 export {
   disLoginPage,
   disPlanning1,
@@ -63,4 +67,6 @@ export {
   hybridEvaluation,
   reportCard,
   graduation,
+  roomPlanner,
+  roomPlannerDesign,
 };
