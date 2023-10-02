@@ -15,6 +15,11 @@ import notionSteamApp from "./notion-steam-app.png";
 //PortfolioV2
 import portfolio1 from "./portfolio-v2/portfolio1.png";
 import portfolio2 from "./portfolio-v2/portfolio2.png";
+import portfolio3 from "./portfolio-v2/portfolio3.png";
+import portfolio4 from "./portfolio-v2/portfolio4.png";
+import portfolio5 from "./portfolio-v2/portfolio5.png";
+import portfolio6 from "./portfolio-v2/portfolio6.png";
+import portfolio7 from "./portfolio-v2/portfolio7.png";
 
 //PortfolioV1
 import homepage from "./portfolio-v1/homepage.png";
@@ -52,6 +57,11 @@ export {
   notionSteamApp,
   portfolio1,
   portfolio2,
+  portfolio3,
+  portfolio4,
+  portfolio5,
+  portfolio6,
+  portfolio7,
   disReport,
   homepage,
   about,

@@ -46,7 +46,15 @@ const projects = [
     underlineColor: "after:bg-green-700",
     borderColor: "border-green-700",
     gitHubLink: "https://github.com/pjholt1234/personal-portfolio",
-    images: [files.portfolio1, files.portfolio2],
+    images: [
+      files.portfolio1,
+      files.portfolio2,
+      files.portfolio3,
+      files.portfolio4,
+      files.portfolio5,
+      files.portfolio6,
+      files.portfolio7,
+    ],
     imgAlignment: null,
     technology: ["Javascript", "React", "Tailwind", "CSS"],
     description:
