@@ -15,6 +15,8 @@ const IsometricSquares = ({ technologies }) => {
       "bg-purple-500",
       "bg-blue-500",
       "bg-red-500",
+      "bg-yellow-600",
+      "bg-indigo-500",
     ];
 
     return (

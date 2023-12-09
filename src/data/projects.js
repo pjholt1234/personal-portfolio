@@ -11,7 +11,16 @@ const projects = [
     gitHubLink: "https://github.com/pjholt1234/room-planner",
     images: [files.roomPlanner, files.roomPlannerDesign],
     imgAlignment: null,
-    technology: ["MongoDB", "Typescript", "React", "CSS"],
+    technology: [
+      "Docker",
+      "Vite",
+      "Express",
+      "MongoDB",
+      "Typescript",
+      "Mongoose",
+      "React",
+      "CSS",
+    ],
     description:
       "I decided to combine both learning typescript, html canvas and its supporting JS API and MongoDB. " +
       "The project was designed to be a room planner, heavily inspired by canva",
@@ -20,10 +29,14 @@ const projects = [
         title: "Description",
         type: "text",
         text:
-          "After completing my personal portfolio, I wanted to continue broadening my knowledge of the Javascript ecosystem. " +
-          "I decided to building this project using typescript for both the front and backend. I used the both create and the plain " +
-          "html canvas for the UI. My goal of this project was to try to scratch build as much as possible and limit my use of packages." +
-          "This was to ensure that I had a good understanding of the underlying technologies.",
+          "After completing my personal portfolio, I wanted to continue broadening my knowledge of the Javascript ecosystem by learning Typescript. " +
+          "I planned to build a room planning application leveraging the html canvas. In addition to this, I used React for various UI Elements." +
+          "My goal of this project was to try to scratch build as much as possible and limit my use of packages, This was to ensure that I had a " +
+          "good understanding of the underlying technologies. \n\n" +
+          "I also wanted to use MongoDB for the first time. I have a large amount of experience with relationship database and wanted to try something new" +
+          "I decided to use MongoDB as it is a popular choice for web applications and I wanted to see what all the fuss was about. \n\n" +
+          "In addition to this, I wanted to further improve my devops skills. I decided to use docker to containerise the application, this project uses" +
+          "docker composer to build and run the frontend, backend and database in separate containers communicating over a docker network",
       },
       {
         title: "Gallery",
