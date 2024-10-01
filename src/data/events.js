@@ -163,11 +163,11 @@ const events = {
     id: "lightflows",
     heading: "Lightflows",
     date: "Oct 2021 - Present",
-    subheading: "Junior Web Developer",
+    subheading: "Full stack developer",
     description:
       "I joined Lightflows in October 2021. Since starting working at Lightflows, I have had the opportunity to work on" +
       " many exciting projects as well as learn new technologies such as Laravel, Livewire, React, Drupal, WordPress " +
-      "and even some Unity. I have contributed to project ranging from brochure sites to a fully automatic video rendering " +
+      "and Unity. I have contributed to projects ranging from brochure sites to a fully automatic video rendering " +
       "platform.",
     scrollPanels: [
       {
@@ -231,6 +231,8 @@ const events = {
           "Brightpearl stock management API",
           "Shopify API",
           "Hubspot API",
+          "Docker",
+          "Digital Ocean",
         ],
       },
       {
