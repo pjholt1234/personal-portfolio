@@ -45,6 +45,14 @@ import graduation from "./graduation.png";
 import roomPlanner from "./room-planner/room-planner-wip.png";
 import roomPlannerDesign from "./room-planner/room-planner-design.png";
 
+//Skin forge
+import skinForge from "./skin-forge/homepage.png";
+import skinForge2 from "./skin-forge/editor-1.png";
+import skinForge3 from "./skin-forge/editor-2.png";
+import skinForge4 from "./skin-forge/editor-3.png";
+import skinForge5 from "./skin-forge/editor-4.png";
+import skinForge6 from "./skin-forge/editor-5.png";
+
 export {
   disLoginPage,
   disPlanning1,
@@ -79,4 +87,10 @@ export {
   graduation,
   roomPlanner,
   roomPlannerDesign,
+  skinForge,
+  skinForge2,
+  skinForge3,
+  skinForge4,
+  skinForge5,
+  skinForge6,
 };

@@ -2,6 +2,66 @@ import * as files from "../assets/index.js";
 
 const projects = [
   {
+    id: "skin-forge",
+    title: "Skin Forge",
+    date: "Feb 2024 - April 2024",
+    bgColor: "bg-yellow-700",
+    underlineColor: "after:bg-yellow-700",
+    borderColor: "border-yellow-700",
+    gitHubLink: "https://github.com/pjholt1234/skin-forge",
+    images: [
+      files.skinForge,
+      files.skinForge2,
+      files.skinForge3,
+      files.skinForge4,
+      files.skinForge5,
+      files.skinForge6,
+    ],
+    imgAlignment: null,
+    technology: [
+      "Docker",
+      "Vite",
+      "Typescript",
+      "React",
+      "NextJS",
+      "Tailwind",
+      "Prisma",
+      "MySQL",
+      "AWS",
+    ],
+    description:
+      "Small project to allow users to create CSGO craft. This was built so I could learn NextJS and" +
+      "try out Prisma",
+    scrollPanels: [
+      {
+        title: "Description",
+        type: "text",
+        text:
+          "I used this project to learn how the NextJS version 14 works and to try out a new ORM called Prisma. " +
+          "I wanted to build a small project that would allow users to create CSGO crafts. I built a web scraper to pull down " +
+          "images from steam to use in a interactive Iframe ",
+      },
+      {
+        title: "Gallery",
+        hideTitle: true,
+        type: "gallery",
+        images: [
+          files.skinForge,
+          files.skinForge2,
+          files.skinForge3,
+          files.skinForge4,
+          files.skinForge5,
+          files.skinForge6,
+        ],
+      },
+      {
+        title: "Reflections",
+        type: "text",
+        text: "I need to strip out the auth and deploy this to AWS when I get the time...",
+      },
+    ],
+  },
+  {
     id: "room-planner-app",
     title: "Room planner WIP",
     date: "Aug 2023 - Present",
