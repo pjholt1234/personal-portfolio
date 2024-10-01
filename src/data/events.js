@@ -201,6 +201,7 @@ const events = {
           "Laravel",
           "MySQL",
           "React",
+          "NextJS",
           "NodeJS",
           "C#",
           "CSS",
